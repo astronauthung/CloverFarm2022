@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 /* footer .container .clover-farm h2::before {
     content: '';
     position: absolute;
@@ -22,6 +21,7 @@
 } */
 /* respon */
 /* respon */
+
 .footer {
 	display: flex;
 	align-items: center;
@@ -52,11 +52,10 @@ footer {
 			text-align: justify;
 			h2 {
 				position: relative;
-				font-family: 'Montserrat', sans-serif;
 				color: #005C43;
 				margin-bottom: 15px;
 				font-size: 40px;
-				font-weight: 800;
+				font-weight: 600;
 			}
 		}
 	}
@@ -117,7 +116,7 @@ footer {
 	}
 }
 .idea-se1 {
-	font-weight: 500;
+	font-weight: 600;
 	width: 100%;
 	background-color: white;
 	padding: 50px 100px;
