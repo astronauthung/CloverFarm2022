@@ -1,7 +1,7 @@
 @charset "UTF-8";
-@import "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap";
-@import "https://fonts.googleapis.com/css2?family=Poppins&display=swap";
-@import "https://fonts.googleapis.com/css2?family=Montserrat&display=swap";
+@import 'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Poppins&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Montserrat&display=swap';
 /* dấu ~ là chọn các element có id là menu phía sau element burger-toggle */
 /* :checked -> Selects every checked <input> element */
 body {

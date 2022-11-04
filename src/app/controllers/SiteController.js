@@ -1,11 +1,8 @@
-class siteController
-{
-    index(req, res)
-    {
-        res.render(('home'));
+class siteController {
+    index(req, res) {
+        res.render('home');
     }
-    search(req, res)
-    {
+    search(req, res) {
         res.render('search');
     }
 }

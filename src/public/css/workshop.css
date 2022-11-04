@@ -1,5 +1,5 @@
-@import "https://fonts.googleapis.com/css2?family=Montserrat&display=swap";
-@import "https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap";
+@import 'https://fonts.googleapis.com/css2?family=Montserrat&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap';
 * {
   margin: 0;
   padding: 0;
@@ -47,7 +47,7 @@ body::-webkit-scrollbar {
   font-family: "Playfair Display", serif;
   font-size: 96px;
   font-weight: 400;
-  color: #005C43;
+  color: #005c43;
   position: relative;
 }
 
@@ -90,7 +90,7 @@ body::-webkit-scrollbar {
   position: relative;
   font-family: "PLayfair Display", serif;
   font-size: 64px;
-  color: #005C43;
+  color: #005c43;
   margin: 100px;
   margin-left: 10px;
 }

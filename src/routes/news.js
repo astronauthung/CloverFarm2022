@@ -11,5 +11,4 @@ router.use('/', newsController.index);
 
 
 
-
 module.exports = router;

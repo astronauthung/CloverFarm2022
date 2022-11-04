@@ -1,11 +1,8 @@
-class newsController
-{
-    index(req, res)
-    {
-        res.render(('news'));
+class newsController {
+    index(req, res) {
+        res.render('news');
     }
-    show(req, res)
-    {
+    show(req, res) {
         res.send('News Detail');
     }
     workshop(req, res)
