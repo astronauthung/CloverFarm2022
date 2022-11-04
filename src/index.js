@@ -5,9 +5,7 @@ const app = express()
 const port = 3000
 const morgan = require('morgan')
 const handlebars = require('express-handlebars')
-
 const route = require('./routes')
-
 
 
 app.use(morgan('combined'));

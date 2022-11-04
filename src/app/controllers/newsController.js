@@ -8,6 +8,11 @@ class newsController
     {
         res.send('News Detail');
     }
+    workshop(req, res)
+    {
+        res.render(('workshop'));
+    }
+
 }
 
 module.exports = new newsController();
