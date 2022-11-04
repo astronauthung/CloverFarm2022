@@ -7,6 +7,10 @@ const handlebars = require('express-handlebars');
 
 const route = require('./routes')
 
+const db = require('./config/database');
+// Connect to Database
+db.connect();
+
 
 
 app.use(morgan('combined'));
@@ -20,11 +24,11 @@ app.engine(
     }),
 );
 app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, 'resources/views'));
+app.set('views', path.join(__dirname, 'resources','views'));
 
 //route INIT
 route(app);
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
+    console.log(` app listening on port ${port}`);
 });
