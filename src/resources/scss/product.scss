@@ -1,0 +1,92 @@
+@import "https://fonts.googleapis.com/css2?family=Montserrat&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap";
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+.product-top {
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+.product-new {
+	width: 100%;
+	height: 100%;
+	.product-new-top {
+		min-height: 10vh;
+		padding: 120px;
+	}
+	.product-new-top-text {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 24px;
+		font-weight: 600;
+		color: #005C43;
+		text-align: center;
+	}
+	.product-new-top-line {
+		margin: auto;
+		width: 20%;
+		background-color: #005C43;
+		padding: 1px;
+		margin-top: 40px;
+	}
+}
+.product-new-under {
+	padding: 0px 100px;
+}
+.product-new-under-text {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 36px;
+	font-weight: 600;
+	color: #000000;
+	text-align: left;
+	margin-bottom: 100px;
+}
+.arrivals-img {
+	img {
+		border-radius: 80px;
+	}
+}
+.product-collection-title {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 36px;
+	font-weight: 600;
+	color: #000000;
+	text-align: left;
+	margin-top: 100px;
+	margin-bottom: 40px;
+}
+.product-collection {
+	position: relative;
+	width: 100%;
+	height: auto;
+	padding: 50px 100px;
+	.product-collection-content {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		flex-direction: row;
+	}
+}
+.product-collection-1 {
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin-top: 15px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 24px;
+	font-weight: 600;
+	img {
+		border-radius: 34px;
+	}
+}

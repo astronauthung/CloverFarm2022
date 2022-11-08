@@ -9,6 +9,12 @@ class newsController {
     {
         res.render(('workshop'));
     }
+    contact(req, res) {
+        res.render(('contact'));
+    }
+    product(req, res) {
+        res.render(('product'));
+    }
 
 }
 
