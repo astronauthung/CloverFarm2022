@@ -1,0 +1,107 @@
+
+
+@import 'variable';
+
+body {
+	padding: 50px 50px;
+	background-color: #FFF8F1 !important;
+}
+img {
+	border-radius: 12px;
+}
+/*------------------------------------------------*/
+.home-intro {
+	margin-top: 100px !important;
+}
+.home-text {
+	font-family: $playfair;
+	font-size: 24px;
+	color: $maincolor;
+}
+.home-line {
+	margin: auto;
+	width: 20%;
+	background-color: $maincolor;
+	padding: 1px;
+}
+.intro-img {
+	img {
+		width: 90%;
+		height: 100%;
+	}
+}
+.intro-content {
+	div {
+		font-family: $poppins;
+		font-size: 24px;
+		font-weight: 600;
+		color: $maincolor;
+	}
+	p {
+		font-family: $poppins;
+		font-size: 20px;
+		text-align: justify;
+	}
+}
+/*------------------------------------------------*/
+.home-story {
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+.story-title {
+	font-family: $poppins;
+	font-size: 24px;
+	font-weight: 400;
+}
+.story-sub {
+	font-family: $poppins;
+	font-size: 18px;
+}
+.story-main {
+	font-family: $playfair;
+	font-size: 32px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	color: $maincolor;
+}
+.story-line {
+	margin: auto;
+	width: 20%;
+	background-color: $maincolor;
+	padding: 1px;
+}
+.story-content {
+	font-family: $playfair;
+	font-size: 18px;
+}
+/*------------------------------------------------*/
+.place-title {
+	font-family: $poppins;
+	font-size: 24px;
+	font-weight: 600;
+	color: $maincolor;
+}
+.home-team {
+	margin-top: 100px !important;
+	margin-bottom: 100px;
+}
+.team-content {
+	h1 {
+		font-family: $poppins;
+		font-size: 24px;
+		font-weight: 600;
+		color: $maincolor;
+	}
+	p {
+		font-family: $poppins;
+		font-size: 18px;
+		text-align: justify;
+	}
+}
+/*------------------------------------------------*/
+.say-content {
+	font-family: $playfair;
+	font-size: 36px;
+	font-weight: 600;
+	color: $maincolor;
+}

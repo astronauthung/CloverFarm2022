@@ -1,16 +1,121 @@
-<div class="mt-4">
-    <div class="row">
-        {{#each courses}}
-        <div class="col-md-6 col-lg-4">
-            <div class="card">
-                <img class="card-img-top" src="{{this.image}}" alt="{{this.name}}">
-                <div class="card-body">
-                    <h5 class="card-title">{{this.name}}</h5>
-                    <p class="card-text">{{this.description}}</p>
-                    <a href="#" class="btn btn-primary">Buy</a>
+    <div class="container-home">
+        <div class="container-fluid">
+            <div class="home-title my-5">
+                <div class="home-text text-center">
+                    An intention, a wish, a recourse, Clover Farm is a collective of people, places and <br>
+                    projects that reframe the way we live and interact
+                </div>
+                <div class="home-line my-4"></div>
+            </div>
+            <div class="home-intro row">
+                <div class="intro-img col-lg-8">
+                    <img src="/Image/pexels-gustavo-fring-4975348.jpg" alt="jpg" class="img-fluid">
+                </div>
+                <div class="intro-content col-lg-4">
+                    <div class="text-uppercase mb-5">introduction</div>
+                    <p class="my-5">Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae obcaecati architecto perferendis, 
+                        dolor corporis numquam sequi mollitia eveniet, suscipit saepe voluptatibus ab molestias unde alias deleniti rem ipsum ratione fugit?</p>
+                    <button type="button" class="btn btn-outline-success">Read more</button>
                 </div>
             </div>
+            <div class="home-story text-center">
+                <div class="story-title text-uppercase mb-5">our story</div>
+                <div class="story-main text-uppercase mb-3">
+                    we are a family-run clover farm and seed company, <br> specialized in unique, uncommon.
+                </div>
+                <div class="story-sub mb-3">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum magni veritatis quis quod ex iure, <br> 
+                    fugit ipsa expedita aliquam praesentium sunt asperiores debitis. Pariatur autem minus ipsa itaque ratione omnis?
+                </div>
+                <div class="story-line mt-5"></div>
+                <div class="story-content my-5">
+                    <div class="sc-1 mb-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam fugiat possimus eveniet, <br>
+                        odit expedita cupiditate odio quam minima aliquam! Commodi molestias quod adipisci deserunt dolorum atque aut tenetur voluptas amet?</div>
+                    <div class="sc-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora consectetur porro doloribus repellendus modi iusto sunt, <br>
+                        nemo sequi autem perspiciatis ea non inventore minus numquam laborum odit! Quis, sit ut.</div>
+                </div>
+                <div class="storyimg">
+                    <img src="/Image/Home/story.jpg" alt="jpg" class="img-fluid">
+                </div>
+            </div>
+            <hr class="mt-5" style="width: 100%; height: 2px; background-color: rgb(0, 0, 0); opacity: 1; margin-top: 30px">
+            <div class="home-place text-center">
+                <div class="place-title text-uppercase my-5">our heart</div>
+                <div class="place-img row">
+                    <div class="col-lg-3">
+                        <div class="card-test mb-4">
+                            <div class="arrivals-img" data-label="Soap">
+                                <img src="/Image/Home/france.jpg" alt="jpg" class="img-fluid">
+                            </div>
+                            <h4 class="my-5">France</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card-test mb-4">
+                            <div class="arrivals-img" data-label="Soap">
+                                <img src="/Image/Home/swe.jpg" alt="jpg" class="img-fluid">
+                            </div>
+                            <h4 class="my-5">Switzerland</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card-test mb-4">
+                            <div class="arrivals-img" data-label="Soap">
+                                <img src="/Image/Home/england.jpg" alt="jpg" class="img-fluid">
+                            </div>
+                            <h4 class="my-5">England</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card-test mb-4">
+                            <div class="arrivals-img" data-label="Soap">
+                                <img src="/Image/Home/vietnam.jpg" alt="jpg" class="img-fluid">
+                            </div>
+                            <h4 class="my-5">Viet Nam</h4>
+                        </div>
+                    </div>
+                </div>
+                <hr class="mb-5" style="width: 100%; height: 2px; background-color: rgb(0, 0, 0); opacity: 1; margin-top: 30px">
+                <div class="home-team row text-start">
+                    <div class="team-content col-lg-4">
+                        <h1 class="mb-5 text-uppercase">people</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae obcaecati architecto perferendis, 
+                            dolor corporis numquam sequi mollitia eveniet, suscipit saepe voluptatibus ab molestias unde alias deleniti rem ipsum ratione fugit?</p>
+                    </div>
+                    <!-- <div class="team-line col-lg-2"></div> -->
+                    <div class="team-img col-lg-4">
+                        <img src="/Image/person.jpg" alt="jpg" class="img-fluid">
+                        <h6 class="mt-1">Hung</h6>
+                    </div>
+                    <div class="team-img col-lg-4">
+                        <img src="/Image/person.jpg" alt="jpg" class="img-fluid">
+                        <h6 class="mt-1">Duy</h6>
+                    </div>
+                </div>
+                <hr class="mb-5" style="width: 100%; height: 2px; background-color: rgb(0, 0, 0); opacity: 1; margin-top: 30px">
+                <div class="home-say">
+                    <div class="say-content mb-5 text-uppercase">what our customers say</div>
+                    <div id="feedback" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="/Image/Home/fb1.svg" class="d-block w-100" alt="svg">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="/Image/Home/fb2.svg" class="d-block w-100" alt="svg">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="/Image/Home/fb3.svg" class="d-block w-100" alt="svg">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#feedback" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#feedback" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                </div>
         </div>
-        {{/each}}
     </div>
-</div>

@@ -15,6 +15,9 @@ class newsController {
     product(req, res) {
         res.render(('product'));
     }
+    home(req, res) {
+        res.render(('home'));
+    }
 
 }
 
