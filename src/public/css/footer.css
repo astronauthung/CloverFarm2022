@@ -1,26 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
-/* footer .container .clover-farm h2::before {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 50px;
-    height: 2px;
-    background-color: rgb(0, 0, 0);
-} */
-/* .footer-col h2::before {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 50px;
-    height: 2px;
-    background-color: rgb(255, 255, 255);
-
-    box-sizing: border-box;
-} */
-/* respon */
-/* respon */
 .footer {
   display: flex;
   align-items: center;
@@ -28,6 +6,7 @@
   flex-direction: column;
   background-color: white;
   justify-content: flex-end;
+  font-family: "Poppins", sans-serif !important;
 }
 
 footer {
@@ -39,8 +18,8 @@ footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  border-top: 1px solid #005c43;
-  border-bottom: 1px solid #005c43;
+  border-top: 1px solid #005C43;
+  border-bottom: 1px solid #005C43;
 }
 footer .footer-container {
   display: flex;
@@ -55,7 +34,7 @@ footer .footer-container .clover-farm {
 }
 footer .footer-container .clover-farm h2 {
   position: relative;
-  color: #005c43;
+  color: #005C43;
   margin-bottom: 15px;
   font-size: 40px;
   font-weight: 600;
@@ -107,12 +86,12 @@ footer p {
   border-radius: 50%;
   font-size: 18px;
   transition: all 0.3s ease;
-  background-color: #005c43;
+  background-color: #005C43;
   color: white;
 }
 .footer-col .social-links a:hover {
   background-color: #ffffff;
-  color: #005c43;
+  color: #005C43;
 }
 
 .idea-se1 {
@@ -129,7 +108,7 @@ footer p {
   width: 100%;
   height: auto;
   padding: 50px 100px;
-  background-color: #005c43;
+  background-color: #005C43;
   justify-content: space-between;
   flex-wrap: wrap;
 }

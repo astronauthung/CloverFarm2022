@@ -7,16 +7,27 @@ class newsController {
     }
     workshop(req, res)
     {
-        res.render(('workshop'));
+        res.render(('workshop'),{
+            style: "workshop",
+            });
     }
     contact(req, res) {
-        res.render(('contact'));
+        res.render(('contact'), {
+            style: "contact",
+        });
     }
     product(req, res) {
-        res.render(('product'));
+        res.render(('product'),{
+            style: "product",
+        });
     }
     home(req, res) {
         res.render(('home'));
+    }
+    catalog(req, res) {
+        res.render(('catalog'),{ 
+            style: "catalog",
+        });
     }
 
 }

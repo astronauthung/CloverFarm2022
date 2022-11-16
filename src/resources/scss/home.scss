@@ -3,11 +3,13 @@
 @import 'variable';
 
 body {
-	padding: 50px 50px;
 	background-color: #FFF8F1 !important;
 }
 img {
 	border-radius: 12px;
+}
+.container-home {
+	padding: 50px 50px;
 }
 /*------------------------------------------------*/
 .home-intro {
@@ -81,9 +83,30 @@ img {
 	font-weight: 600;
 	color: $maincolor;
 }
+.home-place {
+	.place-img {
+		.col-lg-3 {
+			.card-test {
+				h4 {
+					font-family: $poppins;
+					font-size: 24px;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+}
 .home-team {
 	margin-top: 100px !important;
 	margin-bottom: 100px;
+
+	.team-img {
+		h6 {
+			font-family: $poppins;
+			font-size: 18px;
+			font-weight: 600;
+		}
+	}
 }
 .team-content {
 	h1 {

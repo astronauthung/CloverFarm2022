@@ -1,10 +1,13 @@
 body {
-  padding: 50px 50px;
   background-color: #FFF8F1 !important;
 }
 
 img {
   border-radius: 12px;
+}
+
+.container-home {
+  padding: 50px 50px;
 }
 
 /*------------------------------------------------*/
@@ -87,9 +90,20 @@ img {
   color: #005C43;
 }
 
+.home-place .place-img .col-lg-3 .card-test h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
 .home-team {
   margin-top: 100px !important;
   margin-bottom: 100px;
+}
+.home-team .team-img h6 {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .team-content h1 {
