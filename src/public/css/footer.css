@@ -1,12 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
 .footer {
   display: flex;
   align-items: center;
-  min-height: 75vh;
   flex-direction: column;
   background-color: white;
   justify-content: flex-end;
-  font-family: "Poppins", sans-serif !important;
+  font-family: "Poppins", sans-serif;
 }
 
 footer {
@@ -49,7 +47,7 @@ footer p {
 .footer-col h2 {
   text-transform: capitalize;
   font-size: 18px;
-  font-weight: 800;
+  font-weight: 600;
   color: rgb(0, 0, 0);
   margin-bottom: 35px;
   position: relative;
@@ -95,7 +93,7 @@ footer p {
 }
 
 .idea-se1 {
-  font-weight: 600;
+  font-weight: 500;
   width: 100%;
   background-color: white;
   padding: 50px 100px;
@@ -125,7 +123,7 @@ footer p {
 .txt-footer-top h2 {
   font-weight: 400;
   font-size: 18px;
-  color: #9c9c9c;
+  color: #9C9C9C;
   margin-bottom: 15px;
   position: relative;
 }
