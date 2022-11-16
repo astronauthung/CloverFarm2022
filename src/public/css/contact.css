@@ -10,6 +10,7 @@
   background-color: rgb(255, 255, 255);
   background-size: cover;
   margin: 150px 100px;
+  margin-top: 200px;
   border-radius: 34px;
   box-shadow: 0 11px 34px 0 rgba(0, 0, 0, 0.2);
 }
@@ -63,6 +64,7 @@
 }
 
 .right-content {
+  margin-top: 70px;
   width: 60%;
 }
 .right-content iframe {

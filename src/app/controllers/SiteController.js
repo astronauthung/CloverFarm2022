@@ -5,7 +5,7 @@ class siteController {
     index(req, res, next) {
         res.render('home', {
         style: "home",
-        title: "Clover Farm",
+        title: "Home | CLOVER ®",
         });
     }
     search(req, res) {

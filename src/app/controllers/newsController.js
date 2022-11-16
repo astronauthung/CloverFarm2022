@@ -9,16 +9,19 @@ class newsController {
     {
         res.render(('workshop'),{
             style: "workshop",
+            title: "Workshop | CLOVER ®",
             });
     }
     contact(req, res) {
         res.render(('contact'), {
             style: "contact",
+            title: "Contact | CLOVER ®",
         });
     }
     product(req, res) {
         res.render(('product'),{
             style: "product",
+            title: "Product | CLOVER ®",
         });
     }
     home(req, res) {
@@ -27,6 +30,7 @@ class newsController {
     catalog(req, res) {
         res.render(('catalog'),{ 
             style: "catalog",
+            title: "Catalog | CLOVER ®",
         });
     }
 
