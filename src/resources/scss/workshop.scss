@@ -1,5 +1,5 @@
-@import 'https://fonts.googleapis.com/css2?family=Montserrat&display=swap';
-@import 'https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap';
+@import 'variable';
+
 * {
     margin: 0;
     padding: 0;
@@ -112,14 +112,32 @@ body {
     margin: 50px;
     margin-left: 10px;
 }
-#carousel-img {
+.carousel-item {
     img {
-        filter: brightness(75%);
+        filter: brightness(55%);
     }
 }
-#carousel-caption {
-    top: 50%;
+.carousel-caption {
+    top: 45%;
     transform: translateY(-35%);
+
+    h1 {
+        font-family: $playfair;
+        letter-spacing: 2px;
+    }
+    p {
+        font-family: $poppins;
+        font-size: 18px;
+    }
+    button {
+        background-color: $maincolor;
+        border: none;
+
+        transition: all 0.3s ease;
+    }
+    button:hover {
+        background-color: #00936c;
+    }
 }
 .carousel-button-prev {
     padding: 50px 100px;
