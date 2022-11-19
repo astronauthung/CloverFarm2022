@@ -95,6 +95,40 @@ img {
   font-size: 24px;
   font-weight: 600;
 }
+.home-place .place-img .col-lg-3 .card-test .arrivals-img {
+  position: relative;
+}
+.home-place .place-img .col-lg-3 .card-test .arrivals-img img {
+  display: block;
+}
+.home-place .place-img .col-lg-3 .card-test .arrivals-img .card-test-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+}
+.home-place .place-img .col-lg-3 .card-test .arrivals-img .card-test-content {
+  position: absolute;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 20px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.home-place .place-img .col-lg-3 .card-test .arrivals-img:hover .card-test-overlay {
+  opacity: 1;
+}
 
 .home-team {
   margin-top: 100px !important;

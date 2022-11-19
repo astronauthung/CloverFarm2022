@@ -92,6 +92,42 @@ img {
 					font-size: 24px;
 					font-weight: 600;
 				}
+				.arrivals-img {
+					position: relative;
+					
+					img {
+						display: block;
+					}
+					.card-test-overlay {
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						height: 100%;
+						width: 100%;
+						opacity: 0;
+						transition: .5s ease;
+						background-color: rgba(0, 0, 0, 0.5);
+
+						border-radius: 12px;
+					}
+					.card-test-content {
+						position: absolute;
+						font-family: $poppins;
+						color: white;
+						font-size: 20px;
+						top: 50%;
+						left: 50%;
+						-webkit-transform: translate(-50%, -50%);
+						-ms-transform: translate(-50%, -50%);
+						transform: translate(-50%, -50%);
+						text-align: center;
+					}
+				}
+				.arrivals-img:hover .card-test-overlay {
+					opacity: 1;
+				}
 			}
 		}
 	}
