@@ -28,9 +28,9 @@ body {
 }
 
 .inside-content-text-test {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 400;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -72,7 +72,7 @@ body {
 
 .something-content-text-1 {
   position: relative;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 3px;
@@ -81,7 +81,7 @@ body {
 
 .something-content-text-2 {
   position: relative;
-  font-family: "PLayfair Display", serif;
+  font-family: "Playfair Display", serif;
   font-size: 64px;
   color: #005c43;
   margin: 100px;
@@ -90,9 +90,9 @@ body {
 
 .something-content-text-3 {
   position: relative;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 400;
   text-align: justify;
   margin: 180px;
   margin-left: 10px;
@@ -107,6 +107,18 @@ body {
 .workshop-content {
   padding: 50px 100px;
 }
+.workshop-content .workshop-content-top {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  color: #005C43;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.workshop-content .workshop-content-main {
+  padding: 0px 200px !important;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+}
 .workshop-content .workshop-content-top-line {
   margin: auto;
   width: 20%;
@@ -118,51 +130,41 @@ body {
   padding: 0px 100px;
 }
 
-.workshop-teach .workshop-teach-content {
+.workshop-teach {
   padding: 0px 100px;
+}
+.workshop-teach .workshop-teach-title {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  color: #005C43;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.workshop-teach .workshop-teach-content {
+  padding: 0px 200px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
 }
 
 .workshop-feel {
-  padding: 0px 100px;
+  padding: 50px 100px;
+}
+.workshop-feel .workshop-feel-content .wfc-title {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  color: #005C43;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.workshop-feel .workshop-feel-content .wfc-sub {
+  padding: 0px 300px !important;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
 }
 .workshop-feel .col-lg-3 .card-test h4 {
   font-family: "Poppins", sans-serif;
   font-size: 24px;
   font-weight: 600;
-}
-.workshop-feel .col-lg-3 .card-test .arrivals-img {
-  position: relative;
-}
-.workshop-feel .col-lg-3 .card-test .arrivals-img img {
-  display: block;
-}
-.workshop-feel .col-lg-3 .card-test .arrivals-img .card-test-overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: 0.5s ease;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 12px;
-}
-.workshop-feel .col-lg-3 .card-test .arrivals-img .card-test-content {
-  position: absolute;
-  font-family: "Poppins", sans-serif;
-  color: white;
-  font-size: 20px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-.workshop-feel .col-lg-3 .card-test .arrivals-img:hover .card-test-overlay {
-  opacity: 1;
 }
 
 #carousel-main {
@@ -171,10 +173,11 @@ body {
 
 .carousel-main-text {
   position: relative;
-  font-family: "Montserrat", sans-serif;
-  font-size: 20px;
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  color: #005C43;
   font-weight: 600;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   margin: 50px;
   margin-left: 10px;
 }

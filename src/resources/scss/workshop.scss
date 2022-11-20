@@ -28,15 +28,15 @@ body {
     }
 }
 .inside-content-text-test {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $poppins;
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 400;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     position: relative;
     h1 {
-        font-family: 'Playfair Display', serif;
+        font-family: $playfair;
         font-size: 96px;
         font-weight: 400;
         color: #005c43;
@@ -70,7 +70,7 @@ body {
 }
 .something-content-text-1 {
     position: relative;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $poppins;
     font-size: 20px;
     font-weight: 600;
     letter-spacing: 3px;
@@ -78,7 +78,7 @@ body {
 }
 .something-content-text-2 {
     position: relative;
-    font-family: 'PLayfair Display', serif;
+    font-family: $playfair;
     font-size: 64px;
     color: #005c43;
     margin: 100px;
@@ -86,9 +86,9 @@ body {
 }
 .something-content-text-3 {
     position: relative;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $poppins;
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 400;
     text-align: justify;
     margin: 180px;
     margin-left: 10px;
@@ -103,6 +103,20 @@ body {
 .workshop-content {
     padding: 50px 100px;
 
+    .workshop-content-top {
+        font-family: $playfair;
+        font-size: 30px;
+        color: $maincolor;
+        font-weight: 600;
+
+        letter-spacing: 2px;
+    }
+    .workshop-content-main {
+        padding: 0px 200px !important;
+
+        font-family: $poppins;
+        font-size: 18px;
+    }
     .workshop-content-top-line {
         margin: auto;
 		width: 20%;
@@ -115,55 +129,48 @@ body {
     }
 }
 .workshop-teach {
+    padding: 0px 100px;
+
+    .workshop-teach-title {
+        font-family: $playfair;
+        font-size: 30px;
+        color: $maincolor;
+        font-weight: 600;
+
+        letter-spacing: 2px;
+    }
     .workshop-teach-content {
-        padding: 0px 100px;
+        padding: 0px 200px;
+
+        font-family: $poppins;
+        font-size: 18px;
     }
 }
 .workshop-feel {
-    padding: 0px 100px;
+    padding: 50px 100px;
 
+    .workshop-feel-content {
+        .wfc-title {
+            font-family: $playfair;
+            font-size: 36px;
+            color: $maincolor;
+            font-weight: 600;
+    
+            letter-spacing: 2px;
+        }
+        .wfc-sub {
+            padding: 0px 300px !important;
+
+            font-family: $poppins;
+            font-size: 18px;
+        }
+    }
     .col-lg-3 {
         .card-test {
             h4 {
                 font-family: $poppins;
                 font-size: 24px;
                 font-weight: 600;
-            }
-            .arrivals-img {
-                position: relative;
-                
-                img {
-                    display: block;
-                }
-                .card-test-overlay {
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    height: 100%;
-                    width: 100%;
-                    opacity: 0;
-                    transition: .5s ease;
-                    background-color: rgba(0, 0, 0, 0.5);
-
-                    border-radius: 12px;
-                }
-                .card-test-content {
-                    position: absolute;
-                    font-family: $poppins;
-                    color: white;
-                    font-size: 20px;
-                    top: 50%;
-                    left: 50%;
-                    -webkit-transform: translate(-50%, -50%);
-                    -ms-transform: translate(-50%, -50%);
-                    transform: translate(-50%, -50%);
-                    text-align: center;
-                }
-            }
-            .arrivals-img:hover .card-test-overlay {
-                opacity: 1;
             }
         }
     }
@@ -173,10 +180,12 @@ body {
 }
 .carousel-main-text {
     position: relative;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-family: $playfair;
+    font-size: 30px;
+    color: $maincolor;
     font-weight: 600;
-    letter-spacing: 3px;
+
+    letter-spacing: 2px;
     margin: 50px;
     margin-left: 10px;
 }
