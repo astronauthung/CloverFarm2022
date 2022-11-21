@@ -195,16 +195,12 @@ body {
     }
 }
 .carousel-caption {
-    top: 45%;
+    top: 42%;
     transform: translateY(-35%);
 
     h1 {
         font-family: $playfair;
         letter-spacing: 2px;
-    }
-    p {
-        font-family: $poppins;
-        font-size: 18px;
     }
     button {
         background-color: $maincolor;
@@ -215,7 +211,7 @@ body {
     button:hover {
         background-color: #00936c;
     }
-    .carousel-detail {
+    .w-detail, .detail-w-address, .detail-w-date {
         font-family: $poppins;
         font-size: 18px;
     }

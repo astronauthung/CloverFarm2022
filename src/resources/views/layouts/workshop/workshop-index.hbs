@@ -170,15 +170,16 @@
                         <img src="/img/Workshop/pumpkin-crop.jpg" class="d-block w-100" alt="jpg">
                         <div class="carousel-caption d-none d-md-block">
                             <h1 class="w-name mb-5">PUMPKIN</h1>
-                                <div class="detail-w-date">
-                                    19-09-2003
-                                </div>
-                                <div class="detail-w-address">
-                                    1234, 56th Street, New York, NY 12345
-                                </div>
-                            <div class="carousel-detail row my-5">
+                            <div class="detail-w-date">
+                                19-09-2003
                             </div>
-                            <p class="w-detail mb-5">Let's make a pumpkin together.</p>
+                            <div class="detail-w-address">
+                                1234, 56th Street, New York, NY 12345
+                            </div>
+                            <p class="w-detail my-5">
+                                Are you ready for Halloween? Here are a whole bunch of events to get you in the Halloween spirit. The list includes trick-or-treating, costume contests, and much more. This list includes events for both kids and adults.
+                                Make sure to scroll down for a monster of a list, organized chronologically, day by day. And it’s growing every day.
+                            </p>
                             <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal"
                                 data-bs-target="#w1">Explore</button>
                         </div>
@@ -187,12 +188,12 @@
                         <img src="/img/Workshop/pottery-crop.jpg" class="d-block w-100" alt="jpg">
                         <div class="carousel-caption d-none d-md-block">
                             <h1 class="w-name mb-5 text-uppercase">Pottery Making</h1>
-                                <div class="detail-w-date6">
-                                    19-09-2003
-                                </div>
-                                <div class="detail-w-address">
-                                    1234, 56th Street, New York, NY 12345
-                                </div>
+                            <div class="detail-w-date">
+                                19-09-2003
+                            </div>
+                            <div class="detail-w-address">
+                                1234, 56th Street, New York, NY 12345
+                            </div>
                             <p class="w-detail my-5">
                                 At Clover, lessons consist of ancient techniques using hand-building, coiling, and
                                 trimming to create amazing work of pottery. <br>
@@ -246,7 +247,7 @@
                                 <div class="col-md-6 mb-4 d-flex align-items-center">
                                     <div class="form-outline datepicker w-100">
                                         <label for="birthdayDate" class="form-label">Birthday</label>
-                                        <input type="text" class="form-control form-control-lg" id="birthdayDate" />
+                                        <input type="date" class="form-control form-control-lg" id="birthdayDate" min="1945-01-01" max="2020-12-12"/>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-4">
@@ -319,7 +320,7 @@
                                 <div class="col-md-6 mb-4 d-flex align-items-center">
                                     <div class="form-outline datepicker w-100">
                                         <label for="birthdayDate" class="form-label">Birthday</label>
-                                        <input type="text" class="form-control form-control-lg" id="birthdayDate" />
+                                        <input type="date" class="form-control form-control-lg" id="birthdayDate" min="1945-01-01" max="2020-12-12"/>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-4">
@@ -359,7 +360,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary">Confirm</button>
+                        <button onclick="myFunction()" type="button" class="btn btn-primary">Confirm</button>
                     </div>
                 </div>
             </div>

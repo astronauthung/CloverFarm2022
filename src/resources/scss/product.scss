@@ -1,5 +1,7 @@
 @import "https://fonts.googleapis.com/css2?family=Montserrat&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap";
+
+@import 'variable';
 * {
 	margin: 0;
 	padding: 0;
@@ -64,22 +66,35 @@
 	width: 100%;
 	height: auto;
 	padding: 50px 100px;
-	.product-collection-content {
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		flex-direction: row;
-	}
-}
-.product-collection-1 {
-	position: relative;
-	display: flex;
-	align-items: center;
-	margin-top: 15px;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 24px;
-	font-weight: 600;
-	img {
-		border-radius: 30px;
+
+	.container-grid {
+		.c1 {
+			font-family: $poppins;
+			.c1-img {
+				img {
+					border-radius: 30px;
+				}
+			}
+			.c1-content {
+				.c1-content-title, .c1-release-date {
+					font-size: 26px;
+					justify-content: space-between;
+
+					.c1-t-name, .c1-t-id {
+						font-weight: 600;
+					}
+				}
+				.c1-detail {
+					text-align: justify;
+				}
+				.c1-author, .c1-release-date {
+					font-size: 14px;
+					color: #757575;
+				}
+				.c1-release-date {
+					margin-top: 80px;
+				}
+			}
+		}
 	}
 }

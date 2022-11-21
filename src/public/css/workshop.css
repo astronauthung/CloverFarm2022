@@ -187,16 +187,12 @@ body {
 }
 
 .carousel-caption {
-  top: 45%;
+  top: 42%;
   transform: translateY(-35%);
 }
 .carousel-caption h1 {
   font-family: "Playfair Display", serif;
   letter-spacing: 2px;
-}
-.carousel-caption p {
-  font-family: "Poppins", sans-serif;
-  font-size: 18px;
 }
 .carousel-caption button {
   background-color: #005C43;
@@ -206,7 +202,7 @@ body {
 .carousel-caption button:hover {
   background-color: #00936c;
 }
-.carousel-caption .carousel-detail {
+.carousel-caption .w-detail, .carousel-caption .detail-w-address, .carousel-caption .detail-w-date {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
 }

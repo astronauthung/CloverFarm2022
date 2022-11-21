@@ -68,24 +68,28 @@
   height: auto;
   padding: 50px 100px;
 }
-.product-collection .product-collection-content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  flex-direction: row;
+.product-collection .container-grid .c1 {
+  font-family: "Poppins", sans-serif;
 }
-
-.product-collection-1 {
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-top: 15px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 24px;
+.product-collection .container-grid .c1 .c1-img img {
+  border-radius: 30px;
+}
+.product-collection .container-grid .c1 .c1-content .c1-content-title, .product-collection .container-grid .c1 .c1-content .c1-release-date {
+  font-size: 26px;
+  justify-content: space-between;
+}
+.product-collection .container-grid .c1 .c1-content .c1-content-title .c1-t-name, .product-collection .container-grid .c1 .c1-content .c1-content-title .c1-t-id, .product-collection .container-grid .c1 .c1-content .c1-release-date .c1-t-name, .product-collection .container-grid .c1 .c1-content .c1-release-date .c1-t-id {
   font-weight: 600;
 }
-.product-collection-1 img {
-  border-radius: 30px;
+.product-collection .container-grid .c1 .c1-content .c1-detail {
+  text-align: justify;
+}
+.product-collection .container-grid .c1 .c1-content .c1-author, .product-collection .container-grid .c1 .c1-content .c1-release-date {
+  font-size: 14px;
+  color: #757575;
+}
+.product-collection .container-grid .c1 .c1-content .c1-release-date {
+  margin-top: 80px;
 }
 
 /*# sourceMappingURL=product.css.map */
