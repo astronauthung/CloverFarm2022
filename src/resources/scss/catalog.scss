@@ -1,6 +1,6 @@
+@import 'variable';
 
 .container-catalog {
-	background-color: #005C43;
 	background-color: #FFF8F1 !important;
 }
 .catalog-top {
@@ -18,7 +18,7 @@
 	top: 40%;
 	left: 10%;
 	h2 {
-		font-family: 'Poppins', sans-serif;
+		font-family: $poppins;
 		font-size: 24px;
 		font-weight: 600;
 		letter-spacing: 2px;
@@ -26,7 +26,7 @@
 		text-transform: uppercase;
 	}
 	p {
-		font-family: 'Playfair Display', serif;
+		font-family: $playfair;
 		font-size: 32px;
 		color: #ffffff;
 		margin: 20px 0;
@@ -37,7 +37,7 @@
 .main-content {
 	margin-top: 70px;
 	h1 {
-		font-family: 'Playfair Display', serif;
+		font-family: $playfair;
 		letter-spacing: 5px;
 		text-transform: uppercase;
 		color: #005C43;
@@ -53,7 +53,7 @@
 	}
 }
 .row-content-sub {
-	font-family: 'Playfair Display', serif;
+	font-family: $playfair;
 	font-size: 32px;
 	color: #005C43;
 	border-bottom: 2px solid #005C43;
@@ -61,24 +61,24 @@
 	margin-bottom: 50px;
 }
 .row-content-main {
-	font-family: 'Poppins', sans-serif;
+	font-family: $poppins;
 	font-size: 18px;
 	color: #000000;
 	margin-top: 10px;
 	opacity: 0.5;
 }
 #title {
-	font-family: 'Poppins', sans-serif;
+	font-family: $poppins;
 	font-size: 32px;
 	font-weight: 600;
 }
 .m-content {
-	font-family: 'Playfair Display', serif;
+	font-family: $playfair;
 	font-size: 28px;
 	font-weight: 600;
 }
 .m-detail {
-	font-family: 'Poppins', sans-serif;
+	font-family: $poppins;
 	font-size: 24px;
 	text-align: justify;
 }
