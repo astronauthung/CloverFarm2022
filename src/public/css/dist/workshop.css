@@ -20,6 +20,7 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .title-top-content .inside-title-top-content {
   display: flex;
   justify-content: space-between;
@@ -36,6 +37,7 @@ body {
   align-items: flex-end;
   position: relative;
 }
+
 .inside-content-text-test h1 {
   font-family: "Playfair Display", serif;
   font-size: 96px;
@@ -49,6 +51,7 @@ body {
   width: 100%;
   height: 85vh;
 }
+
 .title-top .title-top-img img {
   max-width: 100%;
   height: auto;
@@ -107,6 +110,7 @@ body {
 .workshop-content {
   padding: 50px 100px;
 }
+
 .workshop-content .workshop-content-top {
   font-family: "Playfair Display", serif;
   font-size: 30px;
@@ -114,11 +118,13 @@ body {
   font-weight: 600;
   letter-spacing: 2px;
 }
+
 .workshop-content .workshop-content-main {
   padding: 0px 200px !important;
   font-family: "Poppins", sans-serif;
   font-size: 18px;
 }
+
 .workshop-content .workshop-content-top-line {
   margin: auto;
   width: 20%;
@@ -126,6 +132,7 @@ body {
   padding: 1px;
   margin-top: 40px;
 }
+
 .workshop-content .workshop-content-main {
   padding: 0px 100px;
 }
@@ -133,6 +140,7 @@ body {
 .workshop-teach {
   padding: 0px 100px;
 }
+
 .workshop-teach .workshop-teach-title {
   font-family: "Playfair Display", serif;
   font-size: 30px;
@@ -140,6 +148,7 @@ body {
   font-weight: 600;
   letter-spacing: 2px;
 }
+
 .workshop-teach .workshop-teach-content {
   padding: 0px 200px;
   font-family: "Poppins", sans-serif;
@@ -149,6 +158,7 @@ body {
 .workshop-feel {
   padding: 50px 100px;
 }
+
 .workshop-feel .workshop-feel-content .wfc-title {
   font-family: "Playfair Display", serif;
   font-size: 36px;
@@ -156,11 +166,13 @@ body {
   font-weight: 600;
   letter-spacing: 2px;
 }
+
 .workshop-feel .workshop-feel-content .wfc-sub {
   padding: 0px 300px !important;
   font-family: "Poppins", sans-serif;
   font-size: 18px;
 }
+
 .workshop-feel .col-lg-3 .card-test h4 {
   font-family: "Poppins", sans-serif;
   font-size: 24px;
@@ -190,18 +202,22 @@ body {
   top: 41%;
   transform: translateY(-35%);
 }
+
 .carousel-caption h1 {
   font-family: "Playfair Display", serif;
   letter-spacing: 2px;
 }
+
 .carousel-caption button {
   background-color: #005C43;
   border: none;
   transition: all 0.3s ease;
 }
+
 .carousel-caption button:hover {
   background-color: #00936c;
 }
+
 .carousel-caption .w-detail, .carousel-caption .detail-w-address, .carousel-caption .detail-w-date {
   font-family: "Poppins", sans-serif;
   font-size: 18px;

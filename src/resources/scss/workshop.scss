@@ -195,7 +195,7 @@ body {
     }
 }
 .carousel-caption {
-    top: 42%;
+    top: 41%;
     transform: translateY(-35%);
 
     h1 {
@@ -214,6 +214,8 @@ body {
     .w-detail, .detail-w-address, .detail-w-date {
         font-family: $poppins;
         font-size: 18px;
+
+        padding: 0px 150px;
     }
 }
 .carousel-button-prev {
