@@ -110,7 +110,7 @@
   margin-top: 80px;
 }
 
-.product-new-under .article-container {
+.product-new-under .article-container, .product-collection .article-container {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   line-height: 1.5;
@@ -119,39 +119,39 @@
   gap: 2rem;
 }
 
-.product-new-under .article-container .article-card {
+.product-new-under .article-container .article-card, .product-collection .article-container .article-card {
   background: white;
   border-radius: 20px;
   transition: 0.3s;
 }
 
-.product-new-under .article-container .article-card .article-image {
+.product-new-under .article-container .article-card .article-image, .product-collection .article-container .article-card .article-image {
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
 
-.product-new-under .article-container .article-card .article-image img {
+.product-new-under .article-container .article-card .article-image img, .product-collection .article-container .article-card .article-image img {
   max-width: 100%;
   height: auto;
   border-radius: 20px 20px 0 0;
 }
 
-.product-new-under .article-container .article-card .article-content {
+.product-new-under .article-container .article-card .article-content, .product-collection .article-container .article-card .article-content {
   padding: 2rem;
 }
 
-.product-new-under .article-container .article-card .article-content .card-title {
+.product-new-under .article-container .article-card .article-content .card-title, .product-collection .article-container .article-card .article-content .card-title {
   margin: 1rem 0;
   color: rgba(34, 34, 68, 0.2666666667);
 }
 
-.product-new-under .article-container .article-card .article-content .card-excerpt {
+.product-new-under .article-container .article-card .article-content .card-excerpt, .product-collection .article-container .article-card .article-content .card-excerpt {
   line-height: 1.5rem;
   margin: 0;
 }
 
-.product-new-under .article-container .article-card:hover {
+.product-new-under .article-container .article-card:hover, .product-collection .article-container .article-card:hover {
   box-shadow: 0 4px 20px 0 rgba(34, 68, 123, 0.2);
   cursor: pointer;
 }
