@@ -70,7 +70,8 @@
 	height: auto;
 	padding: 50px 100px;
 
-	.container-grid {
+	.container-collection {
+		justify-content: space-between;
 		.c1 {
 			font-family: $poppins;
 			.c1-img {
@@ -82,7 +83,7 @@
 				.c1-content-title, .c1-release-date {
 					font-size: 26px;
 					justify-content: space-between;
-
+	
 					.c1-t-name, .c1-t-id {
 						font-weight: 600;
 					}
@@ -98,6 +99,58 @@
 					margin-top: 80px;
 				}
 			}
+		}	
+	}
+}
+
+.product-new-under {
+	.article-container {
+		font-family: $poppins;
+		font-size: 18px;
+		line-height: 1.5;
+
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
+		gap: 2rem;
+
+		.article-card {
+			background: white;
+			border-radius: 20px;
+			transition: 0.3s;
+			.article-image {
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+	
+				img {
+					max-width: 100%;
+					height: auto;
+					border-radius: 20px 20px 0 0;
+				}
+			}
+			.article-content {
+				padding: 2rem;
+
+				.card-title {
+					margin: 1rem 0;
+					color: #2244;
+				}
+				.card-excerpt {
+					line-height: 1.5rem;
+					margin: 0;
+				}
+			}
 		}
+		.article-card:hover {
+			box-shadow: 0 4px 20px 0 rgba(34,68,123,0.2);
+			cursor: pointer;
+		}
+
+	}
+}
+@media screen and (min-width: 768px) {
+	.article-card {
+		display: grid;
+		grid-template-rows: 320px 1fr;
 	}
 }
