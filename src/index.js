@@ -7,9 +7,9 @@ const handlebars = require('express-handlebars');
 
 const route = require('./routes')
 
-// const db = require('./config/database');
-// // Connect to Database
-// db.connect();
+const db = require('./config/database');
+// Connect to Database
+db.connect();
 
 
 

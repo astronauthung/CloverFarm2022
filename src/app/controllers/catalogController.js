@@ -1,9 +1,17 @@
+const Catalog = require('../models/catalog');
+const { multipleMongooseToObject } = require('../../utils/mongoose');
+
 class catalogController{
-    index(req, res) {
-        res.render(('layouts/catalog/index'),{ 
-            style: "catalog",
-            title: "Catalog | CLOVER ®",
-        });
+    index(req, res, next) {
+        Catalog.find({})
+            .then(catalogs => {
+                res.render('layouts/catalog/index', {
+                    catalogs: multipleMongooseToObject(catalogs),
+                    style: "catalog",
+                    title: "Catalog | CLOVER ®",
+                })
+            })
+            .catch(next);
     }
 }
 module.exports = new catalogController();
