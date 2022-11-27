@@ -164,67 +164,30 @@
             <div id="carousel-main" class="carousel slide mb-5 reveal" data-bs-ride="carousel">
                 <div class="carousel-main-text text-center text-capitalize">upcoming workshop</div>
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="/img/Workshop/pumpkin-crop.jpg" class="d-block w-100" alt="jpg">
+                    {{#each workshops}}
+                    <div class="carousel-item {{this.workshop_active}}">
+                        <img src="/img/Workshop/{{this.workshop_img}}" class="d-block w-100" alt="jpg">
                         <div class="carousel-caption d-none d-md-block">
-                            <h1 class="w-name mb-5 text-uppercase">pumpkin</h1>
+                            <h1 class="w-name mb-5 text-uppercase">{{this.workshop_name}}</h1>
                             <div class="detail-w-date">
                                 19-09-2003
                             </div>
                             <div class="detail-w-address">
-                                1234, 56th Street, New York, NY 12345
+                                {{this.workshop_address}}
                             </div>
                             <p class="w-detail my-5">
-                                Are you ready for Halloween? Here are a whole bunch of events to get you in the Halloween spirit. 
-                                The list includes trick-or-treating, costume contests, and much more. 
-                                This list includes events for both kids and adults.
-                                Make sure to scroll down for a monster of a list, organized chronologically, day by day. And it’s growing every day.
+                                {{this.workshop_detail}}
                             </p>
                             <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal"
-                                data-bs-target="#w1">Explore</button>
+                                data-bs-target="#{{this.workshop_id}}">Explore</button>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="/img/Workshop/pottery-crop.jpg" class="d-block w-100" alt="jpg">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h1 class="w-name mb-5 text-uppercase">pottery making</h1>
-                            <div class="detail-w-date">
-                                19-09-2003
-                            </div>
-                            <div class="detail-w-address">
-                                1234, 56th Street, New York, NY 12345
-                            </div>
-                            <p class="w-detail my-5">
-                                At Clover, lessons consist of ancient techniques using hand-building, coiling, and
-                                trimming to create amazing work of pottery.
-                                You can book private classes and gather your friends to attend pottery workshops in Viet
-                                Nam with you.
-                                This is also the perfect spot for you to pick up the handmade pottery masterpieces by
-                                professional pottery artists.
-                            </p>
-                            <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal"
-                                data-bs-target="#w2">Explore</button>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel-main"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carousel-main"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade" id="w1" data-bs-backdrop="static" tabindex="-1" aria-labelledby="w1-content"
+                        <div class="modal fade" id="{{this.workshop_id}}" data-bs-backdrop="static" tabindex="-1" aria-labelledby="{{this.workshop_id}}-content"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header text-center">
-                        <h4 class="modal-title w-100" id="w1-content">Tricks or Treat</h4>
+                        <h4 class="modal-title w-100" id="{{this.workshop_id}}-content">{{this.workshop_name}}</h4>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -292,7 +255,43 @@
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="w2" data-bs-backdrop="static" tabindex="-1" aria-labelledby="w2-content"
+                    {{/each}}
+                    {{!-- <div class="carousel-item">
+                        <img src="/img/Workshop/pottery-crop.jpg" class="d-block w-100" alt="jpg">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1 class="w-name mb-5 text-uppercase">pottery making</h1>
+                            <div class="detail-w-date">
+                                19-09-2003
+                            </div>
+                            <div class="detail-w-address">
+                                1234, 56th Street, New York, NY 12345
+                            </div>
+                            <p class="w-detail my-5">
+                                At Clover, lessons consist of ancient techniques using hand-building, coiling, and
+                                trimming to create amazing work of pottery.
+                                You can book private classes and gather your friends to attend pottery workshops in Viet
+                                Nam with you.
+                                This is also the perfect spot for you to pick up the handmade pottery masterpieces by
+                                professional pottery artists.
+                            </p>
+                            <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal"
+                                data-bs-target="#w2">Explore</button>
+                        </div>
+                    </div> --}}
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel-main"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel-main"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        {{!-- <div class="modal fade" id="w2" data-bs-backdrop="static" tabindex="-1" aria-labelledby="w2-content"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
@@ -364,5 +363,5 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
