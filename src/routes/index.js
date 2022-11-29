@@ -10,6 +10,7 @@ function route(app) {
     app.use('/catalog', catalogRouter);
     app.use('/news', newsRouter);
     app.use('/', siteRouter);
+
 }
 
 module.exports = route;

@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 const AdminJSExpress = require('@adminjs/express')
 const express = require('express')
 
-
 const PORT = 9999
 
 const start = async () => {
