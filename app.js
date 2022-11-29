@@ -1,25 +1,36 @@
-
-const AdminJS = require('adminjs')
+const express = require('express');
 const mongoose = require('mongoose');
-const AdminJSExpress = require('@adminjs/express')
-const express = require('express')
+const AdminJS = require('adminjs');
+const AdminJSExpress = require('@adminjs/express');
+const AdminJSMongoose = require('@adminjs/mongoose');
+const connectDb = require('../nodejs_test/src/config/database/index');
 
-const PORT = 9999
+const workshop = require('../nodejs_test/src/app/models/workshop');
+const catalog = require('../nodejs_test/src/app/models/catalog');
 
-const start = async () => {
-  const app = express()
-
-  await mongoose.connect('mongodb+srv://PhucHung:phuchungoccho@cloverfarm2022.4ihfbuf.mongodb.net/test')
-
-  const admin = new AdminJS({
-  })
-
-  const adminRouter = AdminJSExpress.buildRouter(admin)
-  app.use(admin.options.rootPath, adminRouter)
-
-  app.listen(PORT, () => {
-    console.log(`AdminJS started on http://localhost:${PORT}${admin.options.rootPath}`)
-  })
+const catalogOption = {
+    resource: catalog,
 }
 
-start()
+const workshopOption = {
+  resource: workshop,
+}
+
+AdminJS.registerAdapter(AdminJSMongoose);
+
+
+// init adminJS
+const adminJS = new AdminJS({
+    databases: [],
+    rootPath: '/admin',
+    resources: [workshopOption, catalogOption],
+});
+const adminJSRouter = AdminJSExpress.buildRouter(adminJS);
+
+// mount adminJS route and run express app
+const app = express();
+app.use(adminJS.options.rootPath, adminJSRouter);
+
+connectDb.connect();
+
+app.listen(8080, () => console.log('AdminJS is under localhost:8080/admin'));
