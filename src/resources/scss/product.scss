@@ -75,7 +75,11 @@
 		.c1 {
 			font-family: $poppins;
 			.c1-img {
+				width: 80rem;
 				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
 					border-radius: 30px;
 				}
 			}
@@ -103,8 +107,8 @@
 	}
 }
 
-.product-new-under, .product-collection {
-	.article-container {
+.product-new-under {
+	.product-container {
 		font-family: $poppins;
 		font-size: 18px;
 		line-height: 1.5;
@@ -113,11 +117,11 @@
 		grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
 		gap: 2rem;
 
-		.article-card {
+		.product-card {
 			background: white;
 			border-radius: 20px;
 			transition: 0.3s;
-			.article-image {
+			.product-image {
 				margin: 0;
 				padding: 0;
 				overflow: hidden;
@@ -128,20 +132,20 @@
 					border-radius: 20px 20px 0 0;
 				}
 			}
-			.article-content {
+			.product-card-content {
 				padding: 2rem;
 
-				.card-title {
+				.card-content-title {
 					margin: 1rem 0;
 					color: #2244;
 				}
-				.card-excerpt {
+				.card-content-detail {
 					line-height: 1.5rem;
 					margin: 0;
 				}
 			}
 		}
-		.article-card:hover {
+		.product-card:hover {
 			box-shadow: 0 4px 20px 0 rgba(34,68,123,0.2);
 			cursor: pointer;
 		}
@@ -149,7 +153,68 @@
 	}
 }
 @media screen and (min-width: 768px) {
-	.article-card {
+	.product-card {
+		display: grid;
+		grid-template-rows: 320px 1fr;
+	}
+}
+
+.product-collection {
+	.collection-container {
+		font-family: $poppins;
+		font-size: 18px;
+		line-height: 1.5;
+
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
+		gap: 2rem;
+
+		.collection-card {
+			background: white;
+			border-radius: 20px;
+			transition: all 0.3s ease;
+			.collection-image {
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				
+				width: 200%;
+				img {
+					width: 100%;
+					height: 100%;
+					border-radius: 20px 0 0 20px;
+					object-fit: cover;
+				}
+			}
+			.collection-card-content {
+				padding: 2rem;
+
+				.collection-title {
+					font-size: 24px;
+					font-weight: 600;
+					color: #000000;
+
+					justify-content: space-between;
+				}
+				.collection-release, .collection-author {
+					color: #757575;
+				}
+				.collection-detail {
+					margin: 0;
+
+					text-align: justify;
+				}
+			}
+		}
+		.collection-card:hover {
+			box-shadow: 0 4px 20px 0 rgba(34,68,123,0.2);
+			cursor: pointer;
+		}
+
+	}
+}
+@media screen and (min-width: 768px) {
+	.collection-card {
 		display: grid;
 		grid-template-rows: 320px 1fr;
 	}

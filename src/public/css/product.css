@@ -78,7 +78,13 @@
 .product-collection .container-collection .c1 {
   font-family: "Poppins", sans-serif;
 }
+.product-collection .container-collection .c1 .c1-img {
+  width: 80rem;
+}
 .product-collection .container-collection .c1 .c1-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 30px;
 }
 .product-collection .container-collection .c1 .c1-content .c1-content-title, .product-collection .container-collection .c1 .c1-content .c1-release-date {
@@ -99,7 +105,7 @@
   margin-top: 80px;
 }
 
-.product-new-under .article-container, .product-collection .article-container {
+.product-new-under .product-container {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   line-height: 1.5;
@@ -107,39 +113,91 @@
   grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
   gap: 2rem;
 }
-.product-new-under .article-container .article-card, .product-collection .article-container .article-card {
+.product-new-under .product-container .product-card {
   background: white;
   border-radius: 20px;
   transition: 0.3s;
 }
-.product-new-under .article-container .article-card .article-image, .product-collection .article-container .article-card .article-image {
+.product-new-under .product-container .product-card .product-image {
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
-.product-new-under .article-container .article-card .article-image img, .product-collection .article-container .article-card .article-image img {
+.product-new-under .product-container .product-card .product-image img {
   max-width: 100%;
   height: auto;
   border-radius: 20px 20px 0 0;
 }
-.product-new-under .article-container .article-card .article-content, .product-collection .article-container .article-card .article-content {
+.product-new-under .product-container .product-card .product-card-content {
   padding: 2rem;
 }
-.product-new-under .article-container .article-card .article-content .card-title, .product-collection .article-container .article-card .article-content .card-title {
+.product-new-under .product-container .product-card .product-card-content .card-content-title {
   margin: 1rem 0;
   color: rgba(34, 34, 68, 0.2666666667);
 }
-.product-new-under .article-container .article-card .article-content .card-excerpt, .product-collection .article-container .article-card .article-content .card-excerpt {
+.product-new-under .product-container .product-card .product-card-content .card-content-detail {
   line-height: 1.5rem;
   margin: 0;
 }
-.product-new-under .article-container .article-card:hover, .product-collection .article-container .article-card:hover {
+.product-new-under .product-container .product-card:hover {
   box-shadow: 0 4px 20px 0 rgba(34, 68, 123, 0.2);
   cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
-  .article-card {
+  .product-card {
+    display: grid;
+    grid-template-rows: 320px 1fr;
+  }
+}
+.product-collection .collection-container {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
+  gap: 2rem;
+}
+.product-collection .collection-container .collection-card {
+  background: white;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+.product-collection .collection-container .collection-card .collection-image {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 200%;
+}
+.product-collection .collection-container .collection-card .collection-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 0 0 20px;
+  object-fit: cover;
+}
+.product-collection .collection-container .collection-card .collection-card-content {
+  padding: 2rem;
+}
+.product-collection .collection-container .collection-card .collection-card-content .collection-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+  justify-content: space-between;
+}
+.product-collection .collection-container .collection-card .collection-card-content .collection-release, .product-collection .collection-container .collection-card .collection-card-content .collection-author {
+  color: #757575;
+}
+.product-collection .collection-container .collection-card .collection-card-content .collection-detail {
+  margin: 0;
+  text-align: justify;
+}
+.product-collection .collection-container .collection-card:hover {
+  box-shadow: 0 4px 20px 0 rgba(34, 68, 123, 0.2);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .collection-card {
     display: grid;
     grid-template-rows: 320px 1fr;
   }
