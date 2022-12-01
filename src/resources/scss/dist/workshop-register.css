@@ -1,0 +1,88 @@
+body {
+  background-color: #FFF8F1;
+}
+
+.content-top .top-title {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  color: #005C43;
+  font-weight: 600;
+}
+.content-top .top-time {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+}
+
+.top-address {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+}
+
+.top-detail {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  padding: 0 100px;
+}
+
+.second-detail {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  padding: 0 100px;
+}
+
+.third-detail {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  padding: 0 100px;
+}
+
+.second-title {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  color: #005C43;
+}
+
+.third-title {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  color: #005C43;
+}
+
+.form-title {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  color: #005C43;
+}
+
+.explore-form {
+  margin-top: 100px;
+}
+.explore-form .form-main {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.gender {
+  margin-top: 60px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.form-main input {
+  background-color: #FFF8F1 !important;
+  border-width: 0 0 2px;
+}
+.form-main input:focus {
+  border: 2px solid #005C43 !important;
+  outline: none;
+}
+.form-main input:hover {
+  background-color: #005C43 !important;
+  transition: 0.5s;
+}
+
+.button-explore {
+  background-color: #005C43 !important;
+  border-color: #005C43;
+}
