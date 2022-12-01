@@ -10,7 +10,10 @@ var productRouter = require('./product');
 
 var siteRouter = require('./site');
 
+var contactRouter = require('./contact');
+
 function route(app) {
+  app.use('/contact', contactRouter);
   app.use('/product', productRouter);
   app.use('/workshop', workshopRouter);
   app.use('/catalog', catalogRouter);

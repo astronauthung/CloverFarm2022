@@ -3,8 +3,10 @@ const catalogRouter = require('./catalog');
 const workshopRouter = require('./workshop');
 const productRouter = require('./product');
 const siteRouter = require('./site');
+const contactRouter = require('./contact');
 
 function route(app) {
+    app.use('/contact', contactRouter)
     app.use('/product', productRouter);
     app.use('/workshop', workshopRouter);
     app.use('/catalog', catalogRouter);

@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "nodemon src/index.js",
+    "admin": "node src/app.js",
     "watchcss": "sass --watch src/resources/scss:src/public/css/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,12 +15,14 @@
     "@adminjs/express": "^5.0.1",
     "@adminjs/mongoose": "^3.0.1",
     "adminjs": "^6.6.5",
+    "body-parser": "^1.20.1",
     "connect-pg-simple": "^8.0.0",
     "cookie-parser": "^1.4.6",
     "express": "^4.18.2",
     "express-formidable": "^1.2.0",
     "express-handlebars": "^6.0.6",
     "express-session": "^1.17.3",
+    "mongodb": "^4.12.1",
     "mongoose": "^6.7.1",
     "tslib": "^2.4.1"
   },

@@ -1,39 +1,39 @@
 "use strict";
 
-var AdminJS = require('adminjs');
+var express = require('express');
 
 var mongoose = require('mongoose');
 
+var AdminJS = require('adminjs');
+
 var AdminJSExpress = require('@adminjs/express');
 
-var express = require('express');
+var AdminJSMongoose = require('@adminjs/mongoose');
 
-var PORT = 9999;
+var connectDb = require('../nodejs_test/src/config/database/index');
 
-var start = function start() {
-  var app, admin, adminRouter;
-  return regeneratorRuntime.async(function start$(_context) {
-    while (1) {
-      switch (_context.prev = _context.next) {
-        case 0:
-          app = express();
-          _context.next = 3;
-          return regeneratorRuntime.awrap(mongoose.connect('mongodb+srv://PhucHung:phuchungoccho@cloverfarm2022.4ihfbuf.mongodb.net/test'));
+var workshop = require('../nodejs_test/src/app/models/workshop');
 
-        case 3:
-          admin = new AdminJS({});
-          adminRouter = AdminJSExpress.buildRouter(admin);
-          app.use(admin.options.rootPath, adminRouter);
-          app.listen(PORT, function () {
-            console.log("AdminJS started on http://localhost:".concat(PORT).concat(admin.options.rootPath));
-          });
+var catalog = require('../nodejs_test/src/app/models/catalog');
 
-        case 7:
-        case "end":
-          return _context.stop();
-      }
-    }
-  });
+var catalogOption = {
+  resource: catalog
 };
+var workshopOption = {
+  resource: workshop
+};
+AdminJS.registerAdapter(AdminJSMongoose); // init adminJS
 
-start();
+var adminJS = new AdminJS({
+  databases: [],
+  rootPath: '/admin',
+  resources: [workshopOption, catalogOption]
+});
+var adminJSRouter = AdminJSExpress.buildRouter(adminJS); // mount adminJS route and run express app
+
+var app = express();
+app.use(adminJS.options.rootPath, adminJSRouter);
+connectDb.connect();
+app.listen(8080, function () {
+  return console.log('AdminJS is under localhost:8080/admin');
+});

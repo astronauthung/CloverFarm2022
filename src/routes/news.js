@@ -5,7 +5,7 @@ const newsController = require('../app/controllers/newsController');
 
 
 router.get('/home', newsController.home)
-router.get('/contact', newsController.contact);
+
 
 
 router.get('/:slug', newsController.show);
