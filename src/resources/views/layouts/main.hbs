@@ -25,17 +25,6 @@
     </div>
     <!-- JavaScript Bundle with Popper -->
     <script>
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("page").style.top = "0";
-        } else {
-            document.getElementById("page").style.top = "-80px";
-        }
-        prevScrollpos = currentScrollPos;
-        }
-
         window.addEventListener("scroll", reveal);
         function reveal () {
             var reveals = document.querySelectorAll(".reveal");

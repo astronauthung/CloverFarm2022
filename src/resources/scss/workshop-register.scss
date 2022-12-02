@@ -1,84 +1,82 @@
-@import 'variable';
+ @import 'variable';
 
-body {
-	background-color: #FFF8F1;
+
+ body {
+ 	background-color: #FFF8F1;
+ }
+.container-explore {
+	padding: 100px 50px;
 }
-.content-top {
-	.top-title {
-		font-family: $playfair;
-		font-size: 48px;
-		color: $maincolor;
-		font-weight: 600;
-	}
-	.top-time {
-		font-family: $poppins;
-		font-size: 18px;
-	}
-}
-.top-address {
-	font-family: $poppins;
-	font-size: 18px;
-}
-.top-detail {
-	font-family: $poppins;
-	font-size: 18px;
-	padding: 0 100px;
-}
-.second-detail {
-	font-family: $poppins;
-	font-size: 18px;
-	padding: 0 100px;
-}
-.third-detail {
-	font-family: $poppins;
-	font-size: 18px;
-	padding: 0 100px;
-}
-.second-title {
-	font-family: $playfair;
-	font-size: 48px;
-	color: $maincolor;
-}
-.third-title {
-	font-family: $playfair;
-	font-size: 48px;
-	color: $maincolor;
-}
-.form-title {
-	font-family: $playfair;
-	font-size: 48px;
-	color: $maincolor;
-}
-.explore-form {
-	margin-top: 100px;
-	.form-main {
-		display: block;
-		width: 50%;
-		margin: 0 auto;
-	}
-}
-.gender {
-	margin-top: 60px;
-	font-size: 18px;
-	font-weight: 600;
-}
-.form-main {
-	input {
-		background-color: #FFF8F1 !important;
-		border-width: 0 0 2px;
-		&:focus {
-			border: 2px solid $maincolor !important;
-			outline: none;
-		}
-	}
-	input {
-		&:hover {
-			background-color: $maincolor !important;
-			transition: 0.5s;
-		}
-	}
-}
-.button-explore {
-	background-color: $maincolor !important;
-	border-color: $maincolor;
-}
+ .content-top {
+ 	.top-title {
+ 		font-family: $playfair;
+ 		font-size: 48px;
+ 		color: $maincolor;
+ 		font-weight: 600;
+ 	}
+ 	.top-time {
+ 		font-family: $poppins;
+ 		font-size: 18px;
+ 	}
+ }
+ .top-address {
+ 	font-family: $poppins;
+ 	font-size: 18px;
+ }
+ .top-detail {
+ 	font-family: $poppins;
+ 	font-size: 18px;
+ 	padding: 0 100px;
+ }
+ .second-detail {
+ 	font-family: $poppins;
+ 	font-size: 18px;
+ 	padding: 0 100px;
+ }
+ .third-detail {
+ 	font-family: $poppins;
+ 	font-size: 18px;
+ 	padding: 0 100px;
+ }
+ .second-title {
+ 	font-family: $playfair;
+ 	font-size: 48px;
+ 	color: $maincolor;
+ }
+ .third-title {
+ 	font-family: $playfair;
+ 	font-size: 48px;
+ 	color: $maincolor;
+ }
+ .form-title {
+ 	font-family: $playfair;
+ 	font-size: 48px;
+ 	color: $maincolor;
+ }
+ .explore-form {
+ 	margin-top: 100px;
+ 	.form-main {
+ 		display: block;
+ 		width: 50%;
+ 		margin: 0 auto;
+ 	}
+ }
+ .gender {
+ 	margin-top: 60px;
+ 	font-size: 18px;
+ 	font-weight: 600;
+ }
+ .form-main {
+ 	input {
+ 		background-color: #FFF8F1 !important;
+ 		border-width: 0 0 2px;
+ 		&:focus {
+ 			border: 2px solid $maincolor !important;
+ 			outline: none;
+ 		}
+ 	}
+ }
+ .button-explore {
+ 	background-color: $maincolor !important;
+ 	border-color: $maincolor;
+ }

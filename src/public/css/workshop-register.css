@@ -2,6 +2,10 @@ body {
   background-color: #FFF8F1;
 }
 
+.container-explore {
+  padding: 100px 50px;
+}
+
 .content-top .top-title {
   font-family: "Playfair Display", serif;
   font-size: 48px;
@@ -76,10 +80,6 @@ body {
 .form-main input:focus {
   border: 2px solid #005C43 !important;
   outline: none;
-}
-.form-main input:hover {
-  background-color: #005C43 !important;
-  transition: 0.5s;
 }
 
 .button-explore {

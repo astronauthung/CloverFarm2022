@@ -26,6 +26,15 @@ function () {
         });
       });
     }
+  }, {
+    key: "register",
+    value: function register(req, res) {
+      res.render('layouts/workshop/workshop-register', {
+        // workshops: workshops,
+        style: "workshop-register",
+        title: "Workshop Explore | CLOVER ®"
+      });
+    }
   }]);
 
   return workshopController;
