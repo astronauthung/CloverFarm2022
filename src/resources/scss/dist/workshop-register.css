@@ -81,6 +81,10 @@ body {
   border: 2px solid #005C43 !important;
   outline: none;
 }
+.form-main .field .gender .form-check .form-check-input {
+  background-color: #005C43 !important;
+  border-color: #FFF8F1;
+}
 
 .button-explore {
   background-color: #005C43 !important;

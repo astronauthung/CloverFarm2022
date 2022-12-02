@@ -75,6 +75,16 @@
  			outline: none;
  		}
  	}
+	.field {
+		.gender {
+			.form-check {
+				.form-check-input {
+					background-color: $maincolor !important;
+					border-color:#FFF8F1;
+				}
+			}
+		}
+	}
  }
  .button-explore {
  	background-color: $maincolor !important;
