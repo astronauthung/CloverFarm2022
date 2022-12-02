@@ -1,4 +1,5 @@
 const Workshop = require('../models/workshop');
+const Workshop_registration = require('../models/workshop_reg');
 
 class workshopController{
     index(req, res, next) {
@@ -18,6 +19,14 @@ class workshopController{
             style: "workshop-register",
             title: "Workshop Explore | CLOVER ®",
         })
+    }
+
+    registration(req, res, next) {
+        const workshop_registration = new Workshop_registration(req.body);
+        workshop_registration.save()
+            .then(() => res.redirect('/workshop'))
+            .catch(error => {
+            });
     }
 }
 

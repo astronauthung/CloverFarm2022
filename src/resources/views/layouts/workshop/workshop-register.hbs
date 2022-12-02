@@ -52,18 +52,18 @@
             <hr style="width: 50%; height: 2px; background-color: rgba(0, 0, 0, 0.356); opacity: 1; margin: auto; margin-top: 100px">
             <div class="explore-form my-5">
                 <div class="form-title text-center fst-italic my-5">join with us!</div>
-                <form class="form-main">
+                <form class="form-main" method="POST" action="/workshop/registration" id="w1">
                     <div class="field">
                         <div class="my-4">
                             <div class="form-outline">
-                                <input type="text" id="firstName" placeholder="First Name"
-                                    class="form-control form-control-lg" />
+                                <input type="text" name="firstname" id="firstname" placeholder="First Name"
+                                    class="form-control form-control-lg"/>
                             </div>
                         </div>
                         <div class="my-4">
                             <div class="form-outline">
                                 <input type="text" id="lastName" placeholder="Last Name"
-                                    class="form-control form-control-lg" />
+                                    class="form-control form-control-lg" name="lastname" />
                             </div>
                         </div>
                     </div>
@@ -71,24 +71,24 @@
                         <div class="my-4 align-items-center">
                             <div class="form-outline datepicker w-100">
                                 <input type="date" class="form-control form-control-lg"
-                                    id="birthdayDate" min="1945-01-01" max="2020-12-12" />
+                                    id="birthdayDate" min="1945-01-01" max="2020-12-12" name="birthday"/>
                             </div>
                         </div>
                         <div class="gender">
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio"
-                                    name="inlineRadioOptions" id="femaleGender" value="option1"
+                                    name="gender" id="femaleGender" value="Female"
                                     checked />
                                 <label class="form-check-label" for="femaleGender">Female</label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio"
-                                    name="inlineRadioOptions" id="maleGender" value="option2" />
+                                    name="gender" id="maleGender" value="Male" />
                                 <label class="form-check-label" for="maleGender">Male</label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio"
-                                    name="inlineRadioOptions" id="otherGender" value="option3" />
+                                    name="gender" id="otherGender" value="Other" />
                                 <label class="form-check-label" for="otherGender">Other</label>
                             </div>
                         </div>
@@ -97,17 +97,17 @@
                         <div class="my-4">
                             <div class="form-outline">
                                 <input type="email" id="emailAddress" placeholder="Email Address"
-                                    class="form-control form-control-lg" />
+                                    class="form-control form-control-lg" name="email" />
                             </div>
                         </div>
                         <div class="my-4">
                             <div class="form-outline">
                                 <input type="tel" id="phoneNumber" placeholder="Phone Number"
-                                    class="form-control form-control-lg" />
+                                    class="form-control form-control-lg" name="phone_number"/>
                             </div>
                         </div>
                     </div>
-                    <button type="button" class="button-explore btn btn-primary btn-lg col-md-12 text-center my-5">Explore</button>
+                    <button type="submit" class="button-explore btn btn-primary btn-lg col-md-12 text-center my-5" form="w1">Explore</button>
                 </form>
             </div>
         </div>

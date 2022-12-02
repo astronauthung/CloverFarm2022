@@ -10,13 +10,13 @@
                             back to you as soon as we can.
                         </span>
                     </div>
-                    <form id="contact-form" method="post" action="/">
-                        <input type="text" placeholder="name" required name="contact-name"
+                    <form id="contact-form" method="post" action="/contact/help">
+                        <input type="text" placeholder="name" required name="contact_name"
                             oninvalid="this.setCustomValidity('Enter your name')" oninput="this.setCustomValidity('')">
-                        <input type="text" placeholder="email address" required name="contact-mail"
+                        <input type="text" placeholder="email address" required name="contact_mail"
                             oninvalid="this.setCustomValidity('Enter your email address')"
                             oninput="this.setCustomValidity('')">
-                        <input type="text" placeholder="message" required name="contact-problem"
+                        <input type="text" placeholder="message" required name="contact_problem"
                             oninvalid="this.setCustomValidity('Your message')" oninput="this.setCustomValidity('')">
                         <a><input id="submit" type="submit" value="send" class="submit"></a>
                     </form>
