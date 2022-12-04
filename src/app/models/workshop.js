@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const Workshop = new Schema({
     workshop_id: { type: String, maxLength: 255 },
     workshop_name: { type: String, maxLength: 255 },
+    workshop_detail: { type: String, maxLength: 800 },
     workshop_address: { type: String, maxLength: 600 },
     workshop_active: { type: String, maxLength: 600 },
     workshop_date: { type: String, maxLength: 600 },
