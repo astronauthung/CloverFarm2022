@@ -28,8 +28,9 @@ function () {
     key: "help",
     value: function help(req, res, next) {
       var contact = new Contact(req.body);
-      contact.save() // .then(() => res.redirect('/contact'))
-      ["catch"](function (error) {});
+      contact.save().then(function () {
+        return res.redirect('/contact');
+      })["catch"](function (error) {});
     }
   }]);
 
