@@ -11,7 +11,7 @@ class contactController {
     help(req, res,next) {
         const contact = new Contact(req.body);
         contact.save()
-            .then(() => res.redirect('/'))
+            // .then(() => res.redirect('/contact'))
             .catch(error => {});
     }
 }

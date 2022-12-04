@@ -24,16 +24,9 @@ class workshopController{
     registration(req, res, next) {
         const workshop_registration = new Workshop_registration(req.body);
         workshop_registration.save()
-            .then(() => res.redirect('/workshop'))
+            // .then(() => res.redirect('/workshop'))
             .catch(error => {
             });
     }
 }
-
-    // index(req, res) {
-    //     res.render(('layouts/workshop/workshop-index'),{ 
-    //         style: "workshop",
-    //         title: "Workshop | CLOVER ®",
-    //     });
-    // }
 module.exports = new workshopController();

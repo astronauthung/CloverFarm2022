@@ -14,19 +14,13 @@ var connectDb = require('./config/database/index');
 
 var workshop = require('./app/models/workshop');
 
-var catalog = require('./app/models/catalog'); // const contact = require('./app/models/contact');
+var catalog = require('./app/models/catalog');
 
+var contact = require('./app/models/contact');
 
-var bodyParser = require('body-parser'); // app.use(bodyParser.urlencoded({ extended: true }));
-// app.post('/contact', (req, res) => {
-//     let contact = new Contact({
-//       contact_name: req.body.contact_name,
-//       contact_problem: req.body.contact_problem,
-//       contact_mail: req.body.contact_mail,
-//     });
-//     contact.save();
-// });
+var workshop_reg = require('./app/models/workshop_reg');
 
+var bodyParser = require('body-parser');
 
 var PORT = 9999;
 var catalogOption = {
@@ -34,16 +28,19 @@ var catalogOption = {
 };
 var workshopOption = {
   resource: workshop
-}; // const contactOption = {
-//   resource: contact,
-// }
-
+};
+var contactOption = {
+  resource: contact
+};
+var workshop_regOption = {
+  resource: workshop_reg
+};
 AdminJS.registerAdapter(AdminJSMongoose); // init adminJS
 
 var adminJS = new AdminJS({
   databases: [],
   rootPath: '/admin',
-  resources: [workshopOption, catalogOption]
+  resources: [workshopOption, catalogOption, contactOption, workshop_regOption]
 });
 var adminJSRouter = AdminJSExpress.buildRouter(adminJS); // mount adminJS route and run express app
 

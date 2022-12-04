@@ -18,7 +18,9 @@
                             oninput="this.setCustomValidity('')">
                         <input type="text" placeholder="message" required name="contact_problem"
                             oninvalid="this.setCustomValidity('Your message')" oninput="this.setCustomValidity('')">
-                        <a><input id="submit" type="submit" value="send" class="submit"></a>
+                        {{!-- <a><input id="submit" type="submit" value="send" class="submit" id="liveAlertPlaceholder" ></a> --}}
+                        <button type="submit" class="button-contact btn btn-primary btn-lg col-md-12 text-center my-5" id="liveAlertBtn">send</button>
+                        <div id="liveAlertPlaceholder"></div>
                     </form>
                 </div>
             </div>
@@ -28,3 +30,26 @@
         </div>
     </div>
 </div>
+
+<script>
+    const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+
+    const alert = (message, type) => {
+        const wrapper = document.createElement('div')
+        wrapper.innerHTML = [
+                `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+                `   <div>${message}</div>`,
+                '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                '</div>'
+        ].join('')
+
+        alertPlaceholder.append(wrapper)
+    }
+
+    const alertTrigger = document.getElementById('liveAlertBtn')
+    if (alertTrigger) {
+        alertTrigger.addEventListener('click', () => {
+            alert('Nice, you triggered this alert message!', 'success')
+        })
+    }
+</script>

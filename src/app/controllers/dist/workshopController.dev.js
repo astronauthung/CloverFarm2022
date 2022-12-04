@@ -8,6 +8,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 var Workshop = require('../models/workshop');
 
+var Workshop_registration = require('../models/workshop_reg');
+
 var workshopController =
 /*#__PURE__*/
 function () {
@@ -35,15 +37,16 @@ function () {
         title: "Workshop Explore | CLOVER ®"
       });
     }
+  }, {
+    key: "registration",
+    value: function registration(req, res, next) {
+      var workshop_registration = new Workshop_registration(req.body);
+      workshop_registration.save() // .then(() => res.redirect('/workshop'))
+      ["catch"](function (error) {});
+    }
   }]);
 
   return workshopController;
-}(); // index(req, res) {
-//     res.render(('layouts/workshop/workshop-index'),{ 
-//         style: "workshop",
-//         title: "Workshop | CLOVER ®",
-//     });
-// }
-
+}();
 
 module.exports = new workshopController();

@@ -1,3 +1,5 @@
+@import 'variable';
+
 .contact-left {
 	display: flex;
 }
@@ -50,11 +52,16 @@
 				}
 			}
 		}
-		input.submit {
-			background: #005C43;
-			color: rgb(255, 255, 255);
-			font-size: 18px;
-			margin-top: 40px;
+		form {
+			.button-contact {
+				background-color: $maincolor;
+				border-radius: 24px;
+				border: none;
+			}
+			.button-contact:hover {
+				background-color: #005c4485;
+				transition: 0.7s;
+			}
 		}
 	}
 }

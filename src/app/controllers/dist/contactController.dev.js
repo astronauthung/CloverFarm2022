@@ -6,6 +6,8 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
+var Contact = require('../models/contact');
+
 var contactController =
 /*#__PURE__*/
 function () {
@@ -20,6 +22,14 @@ function () {
         style: "contact",
         title: "Contact | CLOVER ®"
       });
+    } //[POST] /contact/help
+
+  }, {
+    key: "help",
+    value: function help(req, res, next) {
+      var contact = new Contact(req.body);
+      contact.save() // .then(() => res.redirect('/contact'))
+      ["catch"](function (error) {});
     }
   }]);
 

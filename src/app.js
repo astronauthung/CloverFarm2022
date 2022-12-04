@@ -7,20 +7,11 @@ const AdminJSMongoose = require('@adminjs/mongoose');
 const connectDb = require('./config/database/index');
 const workshop = require('./app/models/workshop');
 const catalog = require('./app/models/catalog');
-// const contact = require('./app/models/contact');
+const contact = require('./app/models/contact');
+const workshop_reg = require('./app/models/workshop_reg');
 
 const bodyParser = require('body-parser');
 
-// app.use(bodyParser.urlencoded({ extended: true }));
-
-// app.post('/contact', (req, res) => {
-//     let contact = new Contact({
-//       contact_name: req.body.contact_name,
-//       contact_problem: req.body.contact_problem,
-//       contact_mail: req.body.contact_mail,
-//     });
-//     contact.save();
-// });
 
 const PORT = 9999;
 const catalogOption = {
@@ -31,9 +22,12 @@ const workshopOption = {
   resource: workshop,
 }
 
-// const contactOption = {
-//   resource: contact,
-// }
+const contactOption = {
+  resource: contact,
+}
+const workshop_regOption = {
+  resource: workshop_reg,
+}
 
 AdminJS.registerAdapter(AdminJSMongoose);
 
@@ -42,7 +36,7 @@ AdminJS.registerAdapter(AdminJSMongoose);
 const adminJS = new AdminJS({
     databases: [],
     rootPath: '/admin',
-    resources: [workshopOption, catalogOption],
+    resources: [workshopOption, catalogOption, contactOption, workshop_regOption],
 });
 const adminJSRouter = AdminJSExpress.buildRouter(adminJS);
 
