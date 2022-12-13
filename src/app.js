@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const mongoose = require('mongoose');
 const AdminJS = require('adminjs');
 const AdminJSExpress = require('@adminjs/express');
@@ -29,21 +30,28 @@ const workshop_regOption = {
   resource: workshop_reg,
 }
 
-AdminJS.registerAdapter(AdminJSMongoose);
 
+
+AdminJS.registerAdapter(AdminJSMongoose);
 
 // init adminJS
 const adminJS = new AdminJS({
     databases: [],
     rootPath: '/admin',
     resources: [workshopOption, catalogOption, contactOption, workshop_regOption],
+
+    assets: {
+      styles: ["/css/admin.css"],
+    }
 });
 const adminJSRouter = AdminJSExpress.buildRouter(adminJS);
 
 // mount adminJS route and run express app
 const app = express();
 app.use(adminJS.options.rootPath, adminJSRouter);
+app.use(express.static(path.join(__dirname, 'public')));
 
 connectDb.connect();
 
 app.listen(PORT, () => console.log('AdminJS is under localhost:'+PORT+'/admin'));
+

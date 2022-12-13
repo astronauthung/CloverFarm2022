@@ -2,6 +2,8 @@
 
 var express = require('express');
 
+var path = require('path');
+
 var mongoose = require('mongoose');
 
 var AdminJS = require('adminjs');
@@ -40,12 +42,16 @@ AdminJS.registerAdapter(AdminJSMongoose); // init adminJS
 var adminJS = new AdminJS({
   databases: [],
   rootPath: '/admin',
-  resources: [workshopOption, catalogOption, contactOption, workshop_regOption]
+  resources: [workshopOption, catalogOption, contactOption, workshop_regOption],
+  assets: {
+    styles: ["/css/admin.css"]
+  }
 });
 var adminJSRouter = AdminJSExpress.buildRouter(adminJS); // mount adminJS route and run express app
 
 var app = express();
 app.use(adminJS.options.rootPath, adminJSRouter);
+app.use(express["static"](path.join(__dirname, 'public')));
 connectDb.connect();
 app.listen(PORT, function () {
   return console.log('AdminJS is under localhost:' + PORT + '/admin');
