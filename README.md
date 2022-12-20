@@ -13,10 +13,10 @@
   <a href="#download">Download</a> •
   <a href="#credits">Credits</a> 
 </p>
-
 <h1 align="center">
-  <img src="https://media.giphy.com/media/nZjJ3iPXpmRwI/giphy.gif" alt="Markdownify" width="500"</a>
+  <img src="/src/public/img/landingpage.png" alt="Markdownify"</a>
 </h1>
+
 
 
 ## Key Features
