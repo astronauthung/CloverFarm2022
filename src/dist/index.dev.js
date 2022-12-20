@@ -2,23 +2,53 @@
 
 var express = require('express');
 
+var morgan = require('morgan');
+
+var route = require('./routes');
+
 var path = require('path');
 
 var app = express();
 var port = 3000;
 
-var morgan = require('morgan');
+var bodyParser = require('body-parser');
 
 var handlebars = require('express-handlebars');
 
-var bodyParser = require('body-parser');
+var nodemailer = require('nodemailer');
 
-var route = require('./routes');
+var db = require('./config/database');
 
-var db = require('./config/database'); // Connect to Database
-
+app.use(express.json()); // Connect to Database
 
 db.connect();
+app.post('/', function (req, res) {
+  console.log('/*------------------*/');
+  console.log(req.body);
+  var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'hungnp.21it@vku.udn.vn',
+      pass: 'axrgxiqosrqyrksx'
+    }
+  });
+  var mailOptions = {
+    from: 'hungnp.21it@gmail.com',
+    to: req.body.email,
+    subject: 'From Clover Farm to ' + req.body.name,
+    text: 'Your message has been saved by the system. We will reply you as soon as possible!'
+  };
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log(error);
+      res.send('error');
+    } else {
+      console.log('/*------------------*/');
+      console.log('Email sent success');
+      res.send('success');
+    }
+  });
+});
 app.use(morgan('combined'));
 app.use(express["static"](path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({

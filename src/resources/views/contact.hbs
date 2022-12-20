@@ -10,15 +10,14 @@
                             back to you as soon as we can.
                         </span>
                     </div>
-                    <form id="contact-form" method="post" action="/contact/help">
-                        <input type="text" placeholder="name" required name="contact_name"
+                    <form class="contact-form" method="get" action="/contact/help">
+                        <input type="text" placeholder="name" required name="contact_name" id="name"
                             oninvalid="this.setCustomValidity('Enter your name')" oninput="this.setCustomValidity('')">
-                        <input type="text" placeholder="email address" required name="contact_mail"
+                        <input type="text" placeholder="email address" required name="contact_mail" id="email"
                             oninvalid="this.setCustomValidity('Enter your email address')"
                             oninput="this.setCustomValidity('')">
-                        <input type="text" placeholder="message" required name="contact_problem"
+                        <input type="text" placeholder="message" required name="contact_problem" id="message"
                             oninvalid="this.setCustomValidity('Your message')" oninput="this.setCustomValidity('')">
-                        {{!-- <a><input id="submit" type="submit" value="send" class="submit" id="liveAlertPlaceholder" ></a> --}}
                         <button type="submit" class="button-contact btn btn-primary btn-lg col-md-12 text-center my-5" id="liveAlertBtn">send</button>
                         <div id="liveAlertPlaceholder"></div>
                     </form>
@@ -32,6 +31,36 @@
 </div>
 
 <script>
+    const contactForm = document.querySelector('.contact-form');
+
+    let name = document.getElementById('name');
+    let email = document.getElementById('email');
+    let message = document.getElementById('message');
+
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        let formData = {
+            name: name.value,
+            email: email.value,
+        }
+        let xhr = new XMLHttpRequest();
+        xhr.open('POST', '/');
+        xhr.setRequestHeader('content-type', 'application/json');
+        xhr.onload = function() {
+            console.log(xhr.responseText);
+            if(xhr.responseText == 'success') {
+                alert('Email sent');
+                name.value = '';
+                email.value = '';
+                message.value = '';
+            } else {
+                alert('Something went wrong');
+            }
+        }
+        xhr.send(JSON.stringify(formData));
+    })
+
     const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
 
     const alert = (message, type) => {
