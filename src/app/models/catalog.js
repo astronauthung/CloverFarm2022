@@ -7,7 +7,8 @@ const Catalog = new Schema({
     catalog_benefit: { type: String, maxLength: 600 },
     catalog_harvest: { type: String, maxLength: 600 },
     catalog_original: { type: String, maxLength: 600 },
-    catalog_timeline: { type: String, maxLength: 600 },
+    catalog_detail: { type: String, maxLength: 800 },
+    catalog_img_detail: { type: String, maxLength: 600 },
 });
 
 module.exports = mongoose.model('Catalog', Catalog);

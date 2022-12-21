@@ -52,7 +52,7 @@
         xhr.onload = function() {
             console.log(xhr.responseText);
             if(xhr.responseText == 'success') {
-                alert('Email sent');
+                alert('We have received your message. Thank you!');
                 name.value = '';
                 email.value = '';
                 message.value = '';
@@ -62,8 +62,9 @@
         }
         xhr.send(JSON.stringify(formData));
     })
+</script>
 
-    const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+    {{!-- const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
 
     const alert = (message, type) => {
         const wrapper = document.createElement('div')
@@ -82,5 +83,4 @@
         alertTrigger.addEventListener('click', () => {
             alert('Nice, you triggered this alert message!', 'success')
         })
-    }
-</script>
+    } --}}
