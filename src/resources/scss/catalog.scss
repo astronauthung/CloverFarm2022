@@ -76,6 +76,14 @@
 	font-family: $playfair;
 	font-size: 28px;
 	font-weight: 600;
+
+	.original {
+		font-weight: 400 !important;
+	}
+	.harvest {
+		margin-top: 30px;
+		color: $maincolor;
+	}
 }
 .m-detail {
 	font-family: $poppins;
