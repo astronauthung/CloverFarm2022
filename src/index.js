@@ -17,6 +17,7 @@ db.connect();
 
 app.post('/', (req, res) => {
     console.log('/*------------------*/')
+
     console.log(req.body);
     const transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -65,5 +66,5 @@ app.set('views', path.join(__dirname, 'resources','views'));
 //route INIT
 route(app);
 app.listen(port, () => {
-    console.log(` app listening on port ${port}`);
+    console.log(`app listening on http://localhost:${port}`);
 });

@@ -40,6 +40,7 @@ img {
   font-weight: 600;
   color: #005C43;
 }
+
 .intro-content p {
   font-family: "Poppins", sans-serif;
   font-size: 20px;
@@ -96,12 +97,15 @@ img {
   font-size: 24px;
   font-weight: 600;
 }
+
 .home-place .place-img .col-lg-3 .card-test .arrivals-img {
   position: relative;
 }
+
 .home-place .place-img .col-lg-3 .card-test .arrivals-img img {
   display: block;
 }
+
 .home-place .place-img .col-lg-3 .card-test .arrivals-img .card-test-overlay {
   position: absolute;
   top: 0;
@@ -115,6 +119,7 @@ img {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 12px;
 }
+
 .home-place .place-img .col-lg-3 .card-test .arrivals-img .card-test-content {
   position: absolute;
   font-family: "Poppins", sans-serif;
@@ -127,6 +132,7 @@ img {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
 .home-place .place-img .col-lg-3 .card-test .arrivals-img:hover .card-test-overlay {
   opacity: 1;
 }
@@ -135,6 +141,7 @@ img {
   margin-top: 100px !important;
   margin-bottom: 100px;
 }
+
 .home-team .team-img h6 {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
@@ -147,6 +154,7 @@ img {
   font-weight: 600;
   color: #005C43;
 }
+
 .team-content p {
   font-family: "Poppins", sans-serif;
   font-size: 18px;

@@ -63,5 +63,5 @@ app.set('views', path.join(__dirname, 'resources', 'views')); //route INIT
 
 route(app);
 app.listen(port, function () {
-  console.log(" app listening on port ".concat(port));
+  console.log("app listening on http://localhost:".concat(port));
 });

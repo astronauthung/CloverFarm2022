@@ -10,7 +10,7 @@
                             back to you as soon as we can.
                         </span>
                     </div>
-                    <form class="contact-form" method="get" action="/contact/help">
+                    <form class="contact-form" method="post" action="/">
                         <input type="text" placeholder="name" required name="contact_name" id="name"
                             oninvalid="this.setCustomValidity('Enter your name')" oninput="this.setCustomValidity('')">
                         <input type="text" placeholder="email address" required name="contact_mail" id="email"
@@ -38,6 +38,8 @@
     let message = document.getElementById('message');
 
     contactForm.addEventListener('submit', (e) => {
+        
+
         e.preventDefault();
         
         let formData = {

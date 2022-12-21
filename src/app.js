@@ -53,5 +53,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 connectDb.connect();
 
-app.listen(PORT, () => console.log('AdminJS is under localhost:'+PORT+'/admin'));
+app.listen(PORT, () => console.log('AdminJS is under http://localhost:'+PORT+'/admin'));
 
