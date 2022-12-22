@@ -6,12 +6,12 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-var Collection = require('../models/collection');
+var _require = require('../models/product'),
+    Product = _require.Product,
+    Collection = _require.Collection;
 
-var Product = require('../models/product');
-
-var _require = require('../../utils/mongoose'),
-    multipleMongooseToObject = _require.multipleMongooseToObject;
+var _require2 = require('../../utils/mongoose'),
+    multipleMongooseToObject = _require2.multipleMongooseToObject;
 
 var productController =
 /*#__PURE__*/
@@ -23,14 +23,16 @@ function () {
   _createClass(productController, [{
     key: "index",
     value: function index(req, res, next) {
-      Product.find({}) // Collection.find({})
-      .then(function (products) {
-        res.render('layouts/product/product-index', {
-          products: multipleMongooseToObject(products),
-          style: "product",
-          title: "Product | CLOVER ®"
-        });
-      })["catch"](next);
+      Product.find({}).then(function (products) {
+        Collection.find({}).then(function (collections) {
+          res.render('layouts/product/product-index', {
+            products: multipleMongooseToObject(products),
+            collections: multipleMongooseToObject(collections),
+            style: "product",
+            title: "Product | CLOVER ®"
+          });
+        })["catch"](next);
+      });
     }
   }]);
 

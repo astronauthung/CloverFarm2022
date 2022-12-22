@@ -4,6 +4,38 @@ var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 var Catalog = new Schema({
+  catalog_position: {
+    type: Number,
+    maxLength: 255
+  },
+  catalog_img: {
+    type: String,
+    maxLength: 255
+  },
+  catalog_data: {
+    type: String,
+    maxLength: 255
+  },
+  catalog_blank: {
+    type: String,
+    maxLength: 255
+  },
+  catalog_contents: {
+    type: String,
+    maxLength: 255
+  },
+  catalog_contents_title: {
+    type: String,
+    maxLength: 255
+  },
+  catalog_contents_from: {
+    type: String,
+    maxLength: 255
+  },
+  catalog_contents_detail: {
+    type: String,
+    maxLength: 255
+  },
   catalog_id: {
     type: String,
     maxLength: 255

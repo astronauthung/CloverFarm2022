@@ -15,39 +15,37 @@
                 <hr style="width: 100%; height: 3px; background-color: #005C43; opacity: 1; margin-top: 30px">
             </div>
             <div class="container-fluid">
+                
                 <div class="row">
-                    <div class="col-lg-3 mb-3">
-                        <img src="/img/Catalog/coconut.jpg" alt="jpg" class="img-fluid" data-bs-toggle="modal"
-                            data-bs-target="#p1" data-bs-whatever="@getbootstrap">
+                    {{#catalogs}}
+                    <div class="col-lg-{{this.catalog_position}} mb-3">
+                        <img src="/img/Catalog/{{this.catalog_img}}" alt="jpg" class="img-fluid" data-bs-toggle="modal"
+                            data-bs-target="#{{this.catalog_data}}" data-bs-whatever="@getbootstrap">
                     </div>
-                    <div class="col-lg-2 mb-3">
-                        <img src="/img/Catalog/jackfruit.jpg" alt="jpg" class="img-fluid" data-bs-toggle="modal"
+                    {{/catalogs}}
+                    {{!-- <div class="col-lg-2 mb-3">
+                        <img src="/img/Catalog/{{this.catalog_img}}" alt="jpg" class="img-fluid" data-bs-toggle="modal"
                             data-bs-target="#p2" data-bs-whatever="@getbootstrap">
                     </div>
                     <div class="col-lg-2 mb-3">
                         <img src="/img/Catalog/mango.jpg" alt="jpg" class="img-fluid" data-bs-toggle="modal"
                             data-bs-target="#p3" data-bs-whatever="@getbootstrap">
-                    </div>
-                    <div class="col-1 mb-3"></div>
-                    <div class="col-lg-4 mb-3 align-self-center">
+                    </div> --}}
+                    <div class="col-{{this.catalog_blank}} mb-3"></div>
+                    <div class="col-lg-{{this.catalog_contents}} mb-3 align-self-center">
                         <div class="row-content-sub">
-                            plant
+                            {{this.catalog_contents_title}}
                         </div>
                         <div class="row-content-main">
-                            Originated in Viet Nam
+                            {{this.catalog_contents_from}}
                         </div>
                         <div class="row-content-main">
-                            Improves health of eyes, skin, hair, growth, and immune system
-                        </div>
-                        <div class="row-content-main">
-                            Grown year round
-                        </div>
-                        <div class="row-content-main">
-                            60-80 days seed to harvest
+                            {{this.catalog_contents_detail}}
                         </div>
                     </div>
+                    
                 </div>
-                <div class="row">
+                {{!-- <div class="row">
                     <div class="col-lg-2 mb-3">
                         <img src="/img/Catalog/cow.jpg" alt="jpg" class="img-fluid" data-bs-toggle="modal"
                             data-bs-target="#p4" data-bs-whatever="@getbootstrap">
@@ -79,8 +77,8 @@
                             60-80 days seed to harvest
                         </div>
                     </div>
-                </div>
-                <div class="row">
+                </div> --}}
+                {{!-- <div class="row">
                     <div class="col-sm-3 mb-3">
                         <img src="/img/Catalog/plow.jpg" alt="jpg" class="img-fluid" data-bs-toggle="modal"
                             data-bs-target="#p7" data-bs-whatever="@getbootstrap">
@@ -107,7 +105,7 @@
                             60-80 days seed to harvest
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
         {{#each catalogs}}
