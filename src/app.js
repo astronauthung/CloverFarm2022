@@ -1,4 +1,6 @@
 const express = require('express');
+const Connect = require('connect-pg-simple');
+const session = require('express-session');
 const path = require('path');
 const mongoose = require('mongoose');
 const AdminJS = require('adminjs');
@@ -29,7 +31,17 @@ const contactOption = {
 const workshop_regOption = {
   resource: workshop_reg,
 }
+const DEFAULT_ADMIN = {
+  email: 'admin@example.com',
+  password: 'password',
+}
 
+const authenticate = async (email, password) => {
+  if (email === DEFAULT_ADMIN.email && password === DEFAULT_ADMIN.password) {
+    return Promise.resolve(DEFAULT_ADMIN)
+  }
+  return null
+}
 
 
 AdminJS.registerAdapter(AdminJSMongoose);
@@ -44,7 +56,34 @@ const adminJS = new AdminJS({
       styles: ["/css/admin.css"],
     }
 });
-const adminJSRouter = AdminJSExpress.buildRouter(adminJS);
+
+const ConnectSession = Connect(session)
+// const sessionStore = new ConnectSession({
+//     conObject: {
+//       connectionString: 'http://localhost:9999/admin',
+//       ssl: process.env.NODE_ENV === 'production',
+//     },
+//     tableName: 'session',
+//     createTableIfMissing: true,
+//   })
+
+// const adminJSRouter = AdminJSExpress.buildRouter(adminJS);
+const adminJSRouter = AdminJSExpress.buildAuthenticatedRouter(adminJS, {
+  authenticate,
+  cookieName: 'adminjs',
+  cookiePassword: 'somepassword'}
+  , null, {
+    resave: true,
+    saveUninitialized: true,
+    secret: 'somepassword',
+    cookie: {
+      httpOnly: process.env.NODE_ENV === 'production',
+      secure: process.env.NODE_ENV === 'production',
+    },
+    name: 'adminjs',
+  }
+);
+  
 
 // mount adminJS route and run express app
 const app = express();
@@ -53,5 +92,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 connectDb.connect();
 
-app.listen(PORT, () => console.log('AdminJS is under http://localhost:'+PORT+'/admin'));
+app.listen(PORT, () => console.log('Admin is under http://localhost:'+PORT+'/admin'));
 

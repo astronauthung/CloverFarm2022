@@ -13,7 +13,7 @@ class workshopController{
             })
         });
     }
-    register (req, res) {
+    register(req, res){
         res.render('layouts/workshop/workshop-register', {
             // workshops: workshops,
             style: "workshop-register",
