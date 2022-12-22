@@ -49,7 +49,7 @@ footer p {
   text-transform: capitalize;
   font-size: 18px;
   font-weight: 600;
-  color: rgb(0, 0, 0);
+  color: black;
   margin-bottom: 35px;
   position: relative;
 }
@@ -124,7 +124,7 @@ footer p {
 .txt-footer-top h2 {
   font-weight: 600;
   font-size: 18px;
-  color: rgba(255, 255, 255, 0.7764705882);
+  color: #ffffffc6;
   margin-bottom: 15px;
   position: relative;
 }
@@ -149,6 +149,7 @@ footer p {
     width: 50%;
     margin-bottom: 30px;
   }
+
   footer {
     padding: 40px;
   }
@@ -159,13 +160,16 @@ footer p {
     width: 100%;
     margin-bottom: 40px;
   }
+
   .idea-se1 {
     padding: 30px 40px;
   }
+
   .txt-footer-top {
     width: 50%;
     margin-bottom: 30px;
   }
+
   .footer-top {
     padding: 40px;
   }
@@ -177,9 +181,8 @@ footer p {
   .footer-col {
     width: 100%;
   }
+
   .txt-footer-top {
     width: 100%;
   }
 }
-
-/*# sourceMappingURL=footer.css.map */

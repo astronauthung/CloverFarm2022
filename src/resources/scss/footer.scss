@@ -5,7 +5,7 @@
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	background-color: white;
+	background-color: #FFF8F1 !important;
 	justify-content: flex-end;
 
     font-family: $poppins;
@@ -15,7 +15,7 @@ footer {
 	width: 100%;
 	height: auto;
 	padding: 50px 100px;
-	background-color: #ffffff;
+	background-color: #FFF8F1;
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
@@ -98,7 +98,7 @@ footer {
 .idea-se1 {
 	font-weight: 500;
 	width: 100%;
-	background-color: white;
+	background-color: #FFF8F1;
 	padding: 50px 100px;
 	text-align: center;
 	height: 70px;
@@ -121,9 +121,9 @@ footer {
 .txt-footer-top {
 	position: relative;
 	h2 {
-		font-weight: 400;
+		font-weight: 600;
 		font-size: 18px;
-		color: #9C9C9C;
+		color: #ffffffc6;
 		margin-bottom: 15px;
 		position: relative;
 	}

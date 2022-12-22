@@ -36,7 +36,7 @@ body {
   text-align: center;
   z-index: 1;
   position: relative;
-  top: 30vh;
+  top: 18vh;
   display: block;
 }
 
@@ -48,14 +48,14 @@ body {
   text-align: center;
   z-index: 1;
   position: relative;
-  top: 35vh;
+  top: 20vh;
   display: block;
 }
 
 .begin-journey {
   text-align: center;
   position: relative;
-  top: 40vh;
+  top: 28vh;
 }
 
 .begin-journey-link {
