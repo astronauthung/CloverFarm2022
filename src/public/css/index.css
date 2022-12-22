@@ -1,8 +1,8 @@
-@import "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap";
-@import "https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap";
-@import "https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap";
+@import 'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap';
 body {
-  background: url("/img/clover.jpg");
+  background: url("/src/public/img/clover.jpg");
   background-size: cover;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -19,7 +19,7 @@ body {
   font-family: "Playfair Display", serif;
   font-size: 36px;
   font-weight: 400;
-  color: white;
+  color: rgb(255, 255, 255);
   position: fixed;
   top: 5vh;
   left: 5vw;
@@ -31,29 +31,29 @@ body {
   font-family: "Playfair Display", serif;
   font-size: 96px;
   font-weight: 400;
-  color: white;
+  color: rgb(255, 255, 255);
   text-align: center;
   z-index: 1;
   position: relative;
-  top: 30vh;
+  top: -10vh;
   display: block;
 }
 .home-title #h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 24px;
   font-weight: 400;
-  color: white;
+  color: rgb(255, 255, 255);
   text-align: center;
   z-index: 1;
   position: relative;
-  top: 35vh;
+  top: -14vh;
   display: block;
 }
 
 .begin-journey {
   text-align: center;
   position: relative;
-  top: 40vh;
+  top: -8vh;
 }
 
 .begin-journey-link {
@@ -62,7 +62,7 @@ body {
   font-size: 24px;
   line-height: 29px;
   letter-spacing: 0.035em;
-  color: white !important;
+  color: white;
   text-decoration: none;
   text-decoration-line: overline;
 }
@@ -119,3 +119,5 @@ body {
   font-size: 26px;
   display: block;
 }
+
+/*# sourceMappingURL=index.css.map */
