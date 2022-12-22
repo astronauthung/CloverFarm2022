@@ -25,8 +25,7 @@ class workshopController{
         const workshop_registration = new Workshop_registration(req.body);
         workshop_registration.save()
             .then(() => res.redirect('/workshop'))
-            .catch(error => {
-            });
+            .catch(error => {});
     }
 }
 module.exports = new workshopController();

@@ -12,6 +12,8 @@ const workshop = require('./app/models/workshop');
 const catalog = require('./app/models/catalog');
 const contact = require('./app/models/contact');
 const workshop_reg = require('./app/models/workshop_reg');
+const collection = require('./app/models/collection');
+const product = require('./app/models/product');
 
 const bodyParser = require('body-parser');
 
@@ -31,10 +33,19 @@ const contactOption = {
 const workshop_regOption = {
   resource: workshop_reg,
 }
-const DEFAULT_ADMIN = {
-  email: 'admin@example.com',
-  password: 'password',
+
+const collectionOption = {
+  resource: collection,
 }
+const productOption = {
+  resource: product
+}
+
+const DEFAULT_ADMIN = {
+    email: 'admin@example.com',
+    password: 'password',
+}
+
 
 const authenticate = async (email, password) => {
   if (email === DEFAULT_ADMIN.email && password === DEFAULT_ADMIN.password) {
@@ -50,7 +61,7 @@ AdminJS.registerAdapter(AdminJSMongoose);
 const adminJS = new AdminJS({
     databases: [],
     rootPath: '/admin',
-    resources: [workshopOption, catalogOption, contactOption, workshop_regOption],
+    resources: [workshopOption, catalogOption, contactOption, workshop_regOption, collectionOption, productOption],
 
     assets: {
       styles: ["/css/admin.css"],
