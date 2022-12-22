@@ -23,10 +23,10 @@ function () {
   _createClass(productController, [{
     key: "index",
     value: function index(req, res, next) {
-      Product.find({});
-      Collection.find({}).then(function (collections) {
+      Product.find({}) // Collection.find({})
+      .then(function (products) {
         res.render('layouts/product/product-index', {
-          collections: multipleMongooseToObject(collections),
+          products: multipleMongooseToObject(products),
           style: "product",
           title: "Product | CLOVER ®"
         });

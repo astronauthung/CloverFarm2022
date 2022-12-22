@@ -5,10 +5,10 @@ const { multipleMongooseToObject } = require('../../utils/mongoose');
 class productController{
     index(req, res, next) {
         Product.find({})
-        Collection.find({})
-            .then(collections => {
+        // Collection.find({})
+            .then(products => {
                 res.render(('layouts/product/product-index'),{ 
-                    collections: multipleMongooseToObject(collections),
+                    products: multipleMongooseToObject(products),
                     style: "product",
                     title: "Product | CLOVER ®",
                 });
