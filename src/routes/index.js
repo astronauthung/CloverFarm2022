@@ -10,8 +10,8 @@ function route(app) {
     app.use('/product', productRouter);
     app.use('/workshop', workshopRouter);
     app.use('/catalog', catalogRouter);
-    app.use('/', siteRouter);
-    app.use('/landing', landingRouter);
+    app.use('/home', siteRouter);
+    app.use('/', landingRouter);
 
 }
 

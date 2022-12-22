@@ -10,7 +10,7 @@
                             back to you as soon as we can.
                         </span>
                     </div>
-                    <form class="contact-form" method="post" action="/">
+                    <form class="contact-form" method="post" action="/contact/send">
                         <input type="text" placeholder="name" required name="contact_name" id="name"
                             oninvalid="this.setCustomValidity('Enter your name')" oninput="this.setCustomValidity('')">
                         <input type="text" placeholder="email address" required name="contact_mail" id="email"
@@ -29,58 +29,3 @@
         </div>
     </div>
 </div>
-
-<script>
-    const contactForm = document.querySelector('.contact-form');
-
-    let name = document.getElementById('name');
-    let email = document.getElementById('email');
-    let message = document.getElementById('message');
-
-    contactForm.addEventListener('submit', (e) => {
-        
-
-        e.preventDefault();
-        
-        let formData = {
-            name: name.value,
-            email: email.value,
-        }
-        let xhr = new XMLHttpRequest();
-        xhr.open('POST', '/');
-        xhr.setRequestHeader('content-type', 'application/json');
-        xhr.onload = function() {
-            console.log(xhr.responseText);
-            if(xhr.responseText == 'success') {
-                alert('We have received your message. Thank you!');
-                name.value = '';
-                email.value = '';
-                message.value = '';
-            } else {
-                alert('Something went wrong');
-            }
-        }
-        xhr.send(JSON.stringify(formData));
-    })
-</script>
-
-    {{!-- const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-
-    const alert = (message, type) => {
-        const wrapper = document.createElement('div')
-        wrapper.innerHTML = [
-                `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-                `   <div>${message}</div>`,
-                '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-                '</div>'
-        ].join('')
-
-        alertPlaceholder.append(wrapper)
-    }
-
-    const alertTrigger = document.getElementById('liveAlertBtn')
-    if (alertTrigger) {
-        alertTrigger.addEventListener('click', () => {
-            alert('Nice, you triggered this alert message!', 'success')
-        })
-    } --}}

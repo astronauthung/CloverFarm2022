@@ -7,6 +7,7 @@ class catalogController{
             .then(catalogs => {
                 res.render('layouts/catalog/index', {
                     catalogs: multipleMongooseToObject(catalogs),
+                    isNotLandingpage: true,
                     style: "catalog",
                     title: "Catalog | CLOVER ®",
                 })
