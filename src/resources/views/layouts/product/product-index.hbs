@@ -13,38 +13,21 @@
                 </div>
                 <div class="product-new-under">
                     <div class="product-new-under-text">new arrivals</div>
-                    {{!-- <div class="product-under-inside row">
-                        <div class="col-lg-3">
-                            <div class="card-test mb-4">
-                                <div class="arrivals-img" data-label="Soap">
-                                    <img src="/img/Product/product-2-crop.jpg" alt="jpg" class="img-fluid">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="card-test mb-4">
-                                <div class="arrivals-img" data-label="Soap">
-                                    <img src="/img/Product/product-4-crop.jpg" alt="jpg" class="img-fluid">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="card-test mb-4">
-                                <div class="arrivals-img" data-label="Soap">
-                                    <img src="/img/Product/product-2-crop.jpg" alt="jpg" class="img-fluid">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="card-test mb-4">
-                                <div class="arrivals-img" data-label="Soap">
-                                    <img src="/img/Product/product-4-crop.jpg" alt="jpg" class="img-fluid">
-                                </div>
-                            </div>
-                        </div>
-                    </div> --}}
                     <div class="product-container">
+                        {{#each products}}
                         <div class="product-card">
+                            <div class="product-image">
+                                <img src="/img/Product/{{this.product_img}}" alt="jpg">
+                            </div>
+                            <div class="product-card-content">
+                                <h3 class="card-content-title">{{this.product_name}}</h3>
+                                <p class="card-content-detail">
+                                    {{this.product_detail}}
+                                </p>
+                            </div>
+                        </div>
+                        {{/each}}
+                        {{!-- <div class="product-card">
                             <div class="product-image">
                                 <img src="/img/Product/product-2-crop.jpg" alt="jpg">
                             </div>
@@ -76,68 +59,38 @@
                                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos qui itaque cum expedita! Dolores dolor doloremque expedita, sit velit quisquam natus accusantium, obcaecati aut dolorum ipsa consequatur quibusdam? Modi, fuga?
                                 </p>
                             </div>
-                        </div>
-                        <div class="product-card">
-                            <div class="product-image">
-                                <img src="/img/Product/product-2-crop.jpg" alt="jpg">
-                            </div>
-                            <div class="product-card-content">
-                                <h3 class="card-content-title">Trip Planning</h3>
-                                <p class="card-content-detail">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos qui itaque cum expedita! Dolores dolor doloremque expedita, sit velit quisquam natus accusantium, obcaecati aut dolorum ipsa consequatur quibusdam? Modi, fuga?
-                                </p>
-                            </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
+            
             <div class="product-collection">
                 <div class="product-collection-title">our collection</div>
                 <div class="collection-container">
+                    {{#each collections}}
                     <div class="collection-card d-flex">
                         <div class="collection-image">
-                                <img src="/img/Product/p1-cop.jpg" alt="jpg">
+                            <img src="/img/Product/{{this.collection_img}}" alt="jpg">
                         </div>
                         <div class="collection-card-content">
                                 <div class="collection-title d-flex">
                                     <div class="collection-title-name">
-                                        SOAP COLLECTION
+                                        {{this.collection_name}}
                                     </div>
                                     <div class="collection-title-id">
-                                        #9999
+                                        #{{this.collection_id}}
                                     </div>
                                 </div>
                                 <div class="collection-author mb-3">
-                                    By Moonstruck
+                                    By {{this.collection_author}}
                                 </div>
                                 <p class="collection-detail">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos qui itaque cum expedita! Dolores dolor doloremque expedita, sit velit quisquam natus accusantium, obcaecati aut dolorum ipsa consequatur quibusdam? Modi, fuga?
+                                    {{this.collection_description}}
                                 </p>
-                                <div class="collection-release mt-5">RELEASE DATE: Jan 6, 2022</div>
-                            </div>
+                                <div class="collection-release mt-5">RELEASE DATE: {{this.collection_date}}</div>
+                        </div>
                     </div>
-                    <div class="collection-card d-flex">
-                            <div class="collection-image">
-                                <img src="/img/Product/p1-cop.jpg" alt="jpg">
-                            </div>
-                            <div class="collection-card-content">
-                                <div class="collection-title d-flex">
-                                    <div class="collection-title-name">
-                                        SOAP COLLECTION
-                                    </div>
-                                    <div class="collection-title-id">
-                                        #9999
-                                    </div>
-                                </div>
-                                <div class="collection-author mb-3">
-                                    By Moonstruck
-                                </div>
-                                <div class="collection-detail">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos qui itaque cum expedita! Dolores dolor doloremque expedita, sit velit quisquam natus accusantium, obcaecati aut dolorum ipsa consequatur quibusdam? Modi, fuga?
-                                </div>
-                                <div class="collection-release mt-5">RELEASE DATE: Jan 6, 2022</div>
-                            </div>
-                    </div>
+                    {{/each}}
                 </div>
             </div>
         </div>

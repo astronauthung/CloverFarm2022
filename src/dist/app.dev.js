@@ -22,6 +22,10 @@ var contact = require('./app/models/contact');
 
 var workshop_reg = require('./app/models/workshop_reg');
 
+var collection = require('./app/models/collection');
+
+var product = require('./app/models/product');
+
 var bodyParser = require('body-parser');
 
 var PORT = 9999;
@@ -37,12 +41,18 @@ var contactOption = {
 var workshop_regOption = {
   resource: workshop_reg
 };
+var collectionOption = {
+  resource: collection
+};
+var productOption = {
+  resource: product
+};
 AdminJS.registerAdapter(AdminJSMongoose); // init adminJS
 
 var adminJS = new AdminJS({
   databases: [],
   rootPath: '/admin',
-  resources: [workshopOption, catalogOption, contactOption, workshop_regOption],
+  resources: [workshopOption, catalogOption, contactOption, workshop_regOption, collectionOption, productOption],
   assets: {
     styles: ["/css/admin.css"]
   }
