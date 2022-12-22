@@ -17,35 +17,33 @@
             <div class="container-fluid">
                 
                 <div class="row">
-                    {{#catalogs}}
-                    <div class="col-lg-{{this.catalog_position}} mb-3">
-                        <img src="/img/Catalog/{{this.catalog_img}}" alt="jpg" class="img-fluid" data-bs-toggle="modal"
-                            data-bs-target="#{{this.catalog_data}}" data-bs-whatever="@getbootstrap">
+                    <div class="col-lg-3 mb-3">
+                        <img src="/img/Catalog/coconut.jpg" alt="jpg" class="img-fluid" data-bs-toggle="modal"
+                            data-bs-target="#p1" data-bs-whatever="@getbootstrap">
                     </div>
-                    {{/catalogs}}
-                    {{!-- <div class="col-lg-2 mb-3">
-                        <img src="/img/Catalog/{{this.catalog_img}}" alt="jpg" class="img-fluid" data-bs-toggle="modal"
+                    <div class="col-lg-2 mb-3">
+                        <img src="/img/Catalog/jackfruit.jpg" alt="jpg" class="img-fluid" data-bs-toggle="modal"
                             data-bs-target="#p2" data-bs-whatever="@getbootstrap">
                     </div>
                     <div class="col-lg-2 mb-3">
                         <img src="/img/Catalog/mango.jpg" alt="jpg" class="img-fluid" data-bs-toggle="modal"
                             data-bs-target="#p3" data-bs-whatever="@getbootstrap">
-                    </div> --}}
-                    <div class="col-{{this.catalog_blank}} mb-3"></div>
-                    <div class="col-lg-{{this.catalog_contents}} mb-3 align-self-center">
+                    </div>
+                    <div class="col-1 mb-3"></div>
+                    <div class="col-lg-4 mb-3 align-self-center">
                         <div class="row-content-sub">
-                            {{this.catalog_contents_title}}
+                            plant
                         </div>
                         <div class="row-content-main">
-                            {{this.catalog_contents_from}}
+                            Originated in Persia
                         </div>
                         <div class="row-content-main">
-                            {{this.catalog_contents_detail}}
+                            Improves health of eyes, skin, hair, growth, and immune system
                         </div>
                     </div>
                     
                 </div>
-                {{!-- <div class="row">
+                <div class="row">
                     <div class="col-lg-2 mb-3">
                         <img src="/img/Catalog/cow.jpg" alt="jpg" class="img-fluid" data-bs-toggle="modal"
                             data-bs-target="#p4" data-bs-whatever="@getbootstrap">
@@ -77,8 +75,8 @@
                             60-80 days seed to harvest
                         </div>
                     </div>
-                </div> --}}
-                {{!-- <div class="row">
+                </div>
+                <div class="row">
                     <div class="col-sm-3 mb-3">
                         <img src="/img/Catalog/plow.jpg" alt="jpg" class="img-fluid" data-bs-toggle="modal"
                             data-bs-target="#p7" data-bs-whatever="@getbootstrap">
@@ -105,7 +103,7 @@
                             60-80 days seed to harvest
                         </div>
                     </div>
-                </div> --}}
+                </div>
             </div>
         </div>
         {{#each catalogs}}
