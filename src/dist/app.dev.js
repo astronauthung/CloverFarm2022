@@ -89,16 +89,7 @@ var adminJS = new AdminJS({
     styles: ["/css/admin.css"]
   }
 });
-var ConnectSession = Connect(session); // const sessionStore = new ConnectSession({
-//     conObject: {
-//       connectionString: 'http://localhost:9999/admin',
-//       ssl: process.env.NODE_ENV === 'production',
-//     },
-//     tableName: 'session',
-//     createTableIfMissing: true,
-//   })
-// const adminJSRouter = AdminJSExpress.buildRouter(adminJS);
-
+var ConnectSession = Connect(session);
 var adminJSRouter = AdminJSExpress.buildAuthenticatedRouter(adminJS, {
   authenticate: authenticate,
   cookieName: 'adminjs',
