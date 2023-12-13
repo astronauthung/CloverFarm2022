@@ -26,10 +26,12 @@ app.post('/', function (req, res) {
   console.log('/*------------------*/');
   console.log(req.body);
   var transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false,
     auth: {
-      user: 'hungnp.21it@vku.udn.vn',
-      pass: 'axrgxiqosrqyrksx'
+      user: "hungnp.21it@vku.udn.vn",
+      pass: "uyckjzblbryemzcb"
     }
   });
   var mailOptions = {

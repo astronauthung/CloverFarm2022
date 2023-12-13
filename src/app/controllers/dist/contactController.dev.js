@@ -40,7 +40,7 @@ function () {
         service: 'gmail',
         auth: {
           user: 'hungnp.21it@vku.udn.vn',
-          pass: 'axrgxiqosrqyrksx'
+          pass: 'uyckjzblbryemzcb'
         }
       });
       var handlebarOptions = {

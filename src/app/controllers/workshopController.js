@@ -34,7 +34,7 @@ class workshopController{
                 service: 'gmail',
                 auth: {
                     user: 'hungnp.21it@vku.udn.vn',
-                    pass: 'axrgxiqosrqyrksx'
+                    pass: 'uyckjzblbryemzcb'
                 }
             })
             const handlebarOptions = {
