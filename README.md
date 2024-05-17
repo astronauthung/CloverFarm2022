@@ -1,4 +1,4 @@
-<h1 align="center">CaseStudy of 21SE1 </h1>
+<h1 align="center">CaseStudy of 21SE1</h1>
 
 <h1 align="center">
   <br>
@@ -18,8 +18,16 @@
 </h1>
 
 
+## Screenshot
+<h1 align="center">
+  <img src="/src/public/img/figma.png" alt="Markdownify"</a>
+</h1>
 
+## Key Features
 
+* Contact to website
+* Workshop Register
+* Chat with out Chatbot about agriculture 
 
 ## How To Use
 
@@ -48,4 +56,4 @@ You can [download](https://github.com/NickDuyH2K3/CloverFarm2022) the latest ins
 This software uses the following open source packages:
 
 - [Node.js](https://nodejs.org/)
-
+- [Pexels](https://www.pexels.com)
