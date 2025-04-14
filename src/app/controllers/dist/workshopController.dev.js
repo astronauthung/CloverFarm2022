@@ -6,6 +6,7 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
+// const user_password = process.env.USER_PASS;
 var Workshop = require('../models/workshop');
 
 var Workshop_registration = require('../models/workshop_reg');
@@ -51,8 +52,8 @@ function () {
       var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-          user: 'hungnp.21it@vku.udn.vn',
-          pass: 'uyckjzblbryemzcb'
+          user: 'nguyenhung030910@gmail.com',
+          pass: ''
         }
       });
       var handlebarOptions = {

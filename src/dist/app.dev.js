@@ -83,7 +83,7 @@ AdminJS.registerAdapter(AdminJSMongoose); // init adminJS
 
 var adminJS = new AdminJS({
   databases: [],
-  rootPath: '/admin',
+  rootPath: '/',
   resources: [workshopOption, catalogOption, contactOption, workshop_regOption, productOption, collectionOption],
   assets: {
     styles: ["/css/admin.css"]

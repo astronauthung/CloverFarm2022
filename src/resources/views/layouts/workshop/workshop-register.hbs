@@ -47,13 +47,13 @@
                     <div class="field">
                         <div class="my-4">
                             <div class="form-outline">
-                                <input type="text" name="firstname" id="firstname" placeholder="First Name"
+                                <input type="text" name="firstname" id="firstname" placeholder="First Name" required
                                     class="form-control form-control-lg" />
                             </div>
                         </div>
                         <div class="my-4">
                             <div class="form-outline">
-                                <input type="text" id="lastName" placeholder="Last Name"
+                                <input type="text" id="lastName" placeholder="Last Name" required
                                     class="form-control form-control-lg" name="lastname" />
                             </div>
                         </div>
@@ -61,8 +61,8 @@
                     <div class="field">
                         <div class="my-4 align-items-center">
                             <div class="form-outline datepicker w-100">
-                                <input type="date" class="form-control form-control-lg" id="birthdayDate"
-                                    min="1945-01-01" max="2020-12-12" name="birthday" />
+                                <input type="date" class="form-control form-control-lg" id="birthdayDate" required
+                                    min="1934-01-01" max="2020-12-12" name="birthday" />
                             </div>
                         </div>
                         <div class="gender">
@@ -77,7 +77,7 @@
                                 <label class="form-check-label" for="maleGender">Male</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="gender" id="otherGender"
+                                <input class="form-check-input" type="radio" name="gender" id="otherGender" 
                                     value="Other" />
                                 <label class="form-check-label" for="otherGender">Other</label>
                             </div>
@@ -86,15 +86,22 @@
                     <div class="field">
                         <div class="my-4">
                             <div class="form-outline">
-                                <input type="email" id="emailAddress" placeholder="Email Address"
+                                <input type="email" id="emailAddress" placeholder="Email Address" required
                                     class="form-control form-control-lg" name="email" />
                             </div>
                         </div>
                         <div class="my-4">
-                            <div class="form-outline">
+                            {{!-- <div class="form-outline">
                                 <input type="tel" id="phoneNumber" placeholder="Phone Number"
                                     class="form-control form-control-lg" required name="phone_number" 
                                     oninvalid="this.setCustomValidity('')"/>
+                            </div> --}}
+                            <div class="form-outline">
+                                <input type="tel" id="phoneNumber" placeholder="Phone Number"
+                                    class="form-control form-control-lg" required name="phone_number" 
+                                    pattern="[0-9]{10}" 
+                                    oninvalid="this.setCustomValidity('Phone number must be 10 digits and contain only numbers')"
+                                    oninput="this.setCustomValidity('')" />
                             </div>
                         </div>
                     </div>

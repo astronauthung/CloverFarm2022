@@ -1,3 +1,5 @@
+// const user_password = process.env.USER_PASS;
+
 const Workshop = require('../models/workshop');
 const Workshop_registration = require('../models/workshop_reg');
 const nodemailer = require('nodemailer');
@@ -33,8 +35,8 @@ class workshopController{
             const transporter = nodemailer.createTransport({
                 service: 'gmail',
                 auth: {
-                    user: 'hungnp.21it@vku.udn.vn',
-                    pass: 'uyckjzblbryemzcb'
+                    user: 'nguyenhung030910@gmail.com',
+                    pass: ''
                 }
             })
             const handlebarOptions = {

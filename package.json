@@ -7,7 +7,7 @@
     "start": "nodemon src/index.js",
     "admin": "node src/app.js",
     "watchcss": "sass --watch src/resources/scss:src/public/css/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --timeout 10000"
   },
   "author": "duy",
   "license": "ISC",
@@ -39,11 +39,14 @@
     }
   },
   "devDependencies": {
+    "chromedriver": "^129.0.4",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
+    "mocha": "^10.7.3",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.20",
     "prettier": "^2.7.1",
-    "sass": "^1.55.0"
+    "sass": "^1.55.0",
+    "selenium-webdriver": "^4.25.0"
   }
 }
